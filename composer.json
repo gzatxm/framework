@@ -1,7 +1,7 @@
 {
-    "name": "gutu/framework",
-    "description": "The Gutu Framework.",
-    "keywords": ["framework", "gutu"],
+    "name": "zgutu/framework",
+    "description": "The Zgutu Framework.",
+    "keywords": ["framework", "zgutu"],
     "license": "MIT",
     "authors": [
         {
