@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Redis\Database
+ * @see \Immortal\Redis\Database
  */
 class Redis extends Facade
 {

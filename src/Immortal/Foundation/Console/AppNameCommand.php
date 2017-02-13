@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
-use Illuminate\Console\Command;
-use Illuminate\Support\Composer;
+use Immortal\Console\Command;
+use Immortal\Support\Composer;
 use Symfony\Component\Finder\Finder;
-use Illuminate\Filesystem\Filesystem;
+use Immortal\Filesystem\Filesystem;
 use Symfony\Component\Console\Input\InputArgument;
 
 class AppNameCommand extends Command
@@ -27,14 +27,14 @@ class AppNameCommand extends Command
     /**
      * The Composer class instance.
      *
-     * @var \Illuminate\Support\Composer
+     * @var \Immortal\Support\Composer
      */
     protected $composer;
 
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \Immortal\Filesystem\Filesystem
      */
     protected $files;
 
@@ -48,8 +48,8 @@ class AppNameCommand extends Command
     /**
      * Create a new key generator command.
      *
-     * @param  \Illuminate\Support\Composer  $composer
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \Immortal\Support\Composer  $composer
+     * @param  \Immortal\Filesystem\Filesystem  $files
      * @return void
      */
     public function __construct(Composer $composer, Filesystem $files)

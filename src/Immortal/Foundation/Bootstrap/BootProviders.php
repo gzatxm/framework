@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Foundation\Bootstrap;
+namespace Immortal\Foundation\Bootstrap;
 
-use Illuminate\Contracts\Foundation\Application;
+use Immortal\Contracts\Foundation\Application;
 
 class BootProviders
 {
     /**
      * Bootstrap the given application.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @return void
      */
     public function bootstrap(Application $app)

@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Database\DatabaseManager
- * @see \Illuminate\Database\Connection
+ * @see \Immortal\Database\DatabaseManager
+ * @see \Immortal\Database\Connection
  */
 class DB extends Facade
 {

@@ -3,7 +3,7 @@
 namespace DummyNamespace;
 
 use DummyRootNamespaceUser;
-use Illuminate\Auth\Access\HandlesAuthorization;
+use Immortal\Auth\Access\HandlesAuthorization;
 
 class DummyClass
 {

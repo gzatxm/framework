@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
-use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
+use Immortal\Console\Command;
+use Immortal\Filesystem\Filesystem;
 
 class ConfigCacheCommand extends Command
 {
@@ -24,14 +24,14 @@ class ConfigCacheCommand extends Command
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \Immortal\Filesystem\Filesystem
      */
     protected $files;
 
     /**
      * Create a new config cache command instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \Immortal\Filesystem\Filesystem  $files
      * @return void
      */
     public function __construct(Filesystem $files)
@@ -68,7 +68,7 @@ class ConfigCacheCommand extends Command
     {
         $app = require $this->laravel->bootstrapPath().'/app.php';
 
-        $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+        $app->make('Immortal\Contracts\Console\Kernel')->bootstrap();
 
         return $app['config']->all();
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace Immortal\Support\Testing\Fakes;
 
 use PHPUnit_Framework_Assert as PHPUnit;
-use Illuminate\Contracts\Events\Dispatcher;
+use Immortal\Contracts\Events\Dispatcher;
 
 class EventFake implements Dispatcher
 {
@@ -49,7 +49,7 @@ class EventFake implements Dispatcher
      *
      * @param  string  $event
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \Immortal\Support\Collection
      */
     public function fired($event, $callback = null)
     {

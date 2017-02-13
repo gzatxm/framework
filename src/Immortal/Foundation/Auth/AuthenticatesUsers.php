@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Foundation\Auth;
+namespace Immortal\Foundation\Auth;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Lang;
+use Immortal\Http\Request;
+use Immortal\Support\Facades\Auth;
+use Immortal\Support\Facades\Lang;
 
 trait AuthenticatesUsers
 {
@@ -13,7 +13,7 @@ trait AuthenticatesUsers
     /**
      * Show the application's login form.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Immortal\Http\Response
      */
     public function showLoginForm()
     {
@@ -23,8 +23,8 @@ trait AuthenticatesUsers
     /**
      * Handle a login request to the application.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \Immortal\Http\Request  $request
+     * @return \Immortal\Http\Response
      */
     public function login(Request $request)
     {
@@ -54,7 +54,7 @@ trait AuthenticatesUsers
     /**
      * Validate the user login request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return void
      */
     protected function validateLogin(Request $request)
@@ -67,7 +67,7 @@ trait AuthenticatesUsers
     /**
      * Attempt to log the user into the application.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return bool
      */
     protected function attemptLogin(Request $request)
@@ -80,7 +80,7 @@ trait AuthenticatesUsers
     /**
      * Get the needed authorization credentials from the request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return array
      */
     protected function credentials(Request $request)
@@ -91,8 +91,8 @@ trait AuthenticatesUsers
     /**
      * Send the response after the user was authenticated.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \Immortal\Http\Request  $request
+     * @return \Immortal\Http\Response
      */
     protected function sendLoginResponse(Request $request)
     {
@@ -107,7 +107,7 @@ trait AuthenticatesUsers
     /**
      * The user has been authenticated.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  mixed  $user
      * @return mixed
      */
@@ -119,8 +119,8 @@ trait AuthenticatesUsers
     /**
      * Get the failed login response instance.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param  \Immortal\Http\Request  $request
+     * @return \Immortal\Http\RedirectResponse
      */
     protected function sendFailedLoginResponse(Request $request)
     {
@@ -144,8 +144,8 @@ trait AuthenticatesUsers
     /**
      * Log the user out of the application.
      *
-     * @param \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param \Immortal\Http\Request  $request
+     * @return \Immortal\Http\Response
      */
     public function logout(Request $request)
     {
@@ -161,7 +161,7 @@ trait AuthenticatesUsers
     /**
      * Get the guard to be used during authentication.
      *
-     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     * @return \Immortal\Contracts\Auth\StatefulGuard
      */
     protected function guard()
     {

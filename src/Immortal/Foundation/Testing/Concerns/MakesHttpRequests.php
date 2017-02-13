@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Concerns;
+namespace Immortal\Foundation\Testing\Concerns;
 
 use Closure;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
-use Illuminate\Http\UploadedFile;
-use Illuminate\Contracts\View\View;
+use Immortal\Support\Arr;
+use Immortal\Support\Str;
+use Immortal\Http\Request;
+use Immortal\Http\UploadedFile;
+use Immortal\Contracts\View\View;
 use PHPUnit_Framework_Assert as PHPUnit;
 use PHPUnit_Framework_ExpectationFailedException;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
@@ -20,7 +20,7 @@ trait MakesHttpRequests
     /**
      * The last response returned by the application.
      *
-     * @var \Illuminate\Http\Response
+     * @var \Immortal\Http\Response
      */
     protected $response;
 
@@ -252,7 +252,7 @@ trait MakesHttpRequests
      *
      * This method allows you to fully customize the entire Request object.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return $this
      */
     public function handle(Request $request)
@@ -562,11 +562,11 @@ trait MakesHttpRequests
      * @param  array  $files
      * @param  array  $server
      * @param  string  $content
-     * @return \Illuminate\Http\Response
+     * @return \Immortal\Http\Response
      */
     public function call($method, $uri, $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
     {
-        $kernel = $this->app->make('Illuminate\Contracts\Http\Kernel');
+        $kernel = $this->app->make('Immortal\Contracts\Http\Kernel');
 
         $this->currentUri = $this->prepareUrlForRequest($uri);
 
@@ -596,7 +596,7 @@ trait MakesHttpRequests
      * @param  array  $files
      * @param  array  $server
      * @param  string  $content
-     * @return \Illuminate\Http\Response
+     * @return \Immortal\Http\Response
      */
     public function callSecure($method, $uri, $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
     {
@@ -616,7 +616,7 @@ trait MakesHttpRequests
      * @param  array  $files
      * @param  array  $server
      * @param  string  $content
-     * @return \Illuminate\Http\Response
+     * @return \Immortal\Http\Response
      */
     public function action($method, $action, $wildcards = [], $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
     {
@@ -636,7 +636,7 @@ trait MakesHttpRequests
      * @param  array  $files
      * @param  array  $server
      * @param  string  $content
-     * @return \Illuminate\Http\Response
+     * @return \Immortal\Http\Response
      */
     public function route($method, $name, $routeParameters = [], $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
     {
@@ -819,7 +819,7 @@ trait MakesHttpRequests
      */
     public function assertRedirectedTo($uri, $with = [])
     {
-        PHPUnit::assertInstanceOf('Illuminate\Http\RedirectResponse', $this->response);
+        PHPUnit::assertInstanceOf('Immortal\Http\RedirectResponse', $this->response);
 
         PHPUnit::assertEquals($this->app['url']->to($uri), $this->response->headers->get('Location'));
 

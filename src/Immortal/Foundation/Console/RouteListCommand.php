@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
 use Closure;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Illuminate\Routing\Route;
-use Illuminate\Routing\Router;
-use Illuminate\Console\Command;
+use Immortal\Support\Arr;
+use Immortal\Support\Str;
+use Immortal\Routing\Route;
+use Immortal\Routing\Router;
+use Immortal\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 
 class RouteListCommand extends Command
@@ -29,14 +29,14 @@ class RouteListCommand extends Command
     /**
      * The router instance.
      *
-     * @var \Illuminate\Routing\Router
+     * @var \Immortal\Routing\Router
      */
     protected $router;
 
     /**
      * An array of all the registered routes.
      *
-     * @var \Illuminate\Routing\RouteCollection
+     * @var \Immortal\Routing\RouteCollection
      */
     protected $routes;
 
@@ -50,7 +50,7 @@ class RouteListCommand extends Command
     /**
      * Create a new route command instance.
      *
-     * @param  \Illuminate\Routing\Router  $router
+     * @param  \Immortal\Routing\Router  $router
      * @return void
      */
     public function __construct(Router $router)
@@ -104,7 +104,7 @@ class RouteListCommand extends Command
     /**
      * Get the route information for a given route.
      *
-     * @param  \Illuminate\Routing\Route  $route
+     * @param  \Immortal\Routing\Route  $route
      * @return array
      */
     protected function getRouteInformation(Route $route)
@@ -133,7 +133,7 @@ class RouteListCommand extends Command
     /**
      * Get before filters.
      *
-     * @param  \Illuminate\Routing\Route  $route
+     * @param  \Immortal\Routing\Route  $route
      * @return string
      */
     protected function getMiddleware($route)

@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Cache\CacheManager
- * @see \Illuminate\Cache\Repository
+ * @see \Immortal\Cache\CacheManager
+ * @see \Immortal\Cache\Repository
  */
 class Cache extends Facade
 {

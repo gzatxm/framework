@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Foundation;
+namespace Immortal\Foundation;
 
 use Closure;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
+use Immortal\Support\Arr;
+use Immortal\Support\Str;
 
 class EnvironmentDetector
 {

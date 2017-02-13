@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
 use Carbon\Carbon;
-use Illuminate\Console\Command;
+use Immortal\Console\Command;
 
 class DownCommand extends Command
 {

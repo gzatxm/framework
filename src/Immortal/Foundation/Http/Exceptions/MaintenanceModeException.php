@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Foundation\Http\Exceptions;
+namespace Immortal\Foundation\Http\Exceptions;
 
 use Exception;
 use Carbon\Carbon;

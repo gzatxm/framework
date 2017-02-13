@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace Immortal\Support\Testing\Fakes;
 
-use Illuminate\Support\Collection;
-use Illuminate\Container\Container;
-use Illuminate\Contracts\Mail\Mailer;
-use Illuminate\Contracts\Mail\Mailable;
+use Immortal\Support\Collection;
+use Immortal\Container\Container;
+use Immortal\Contracts\Mail\Mailer;
+use Immortal\Contracts\Mail\Mailable;
 use PHPUnit_Framework_Assert as PHPUnit;
 
 class MailFake implements Mailer
@@ -61,7 +61,7 @@ class MailFake implements Mailer
      * Format the recipients into a collection.
      *
      * @param  mixed  $recipients
-     * @return \Illuminate\Support\Collection
+     * @return \Immortal\Support\Collection
      */
     protected function formatRecipients($recipients)
     {
@@ -75,8 +75,8 @@ class MailFake implements Mailer
     /**
      * Determine if two given recipient lists match.
      *
-     * @param  \Illuminate\Support\Collection  $expected
-     * @param  \Illuminate\Support\Collection  $recipients
+     * @param  \Immortal\Support\Collection  $expected
+     * @param  \Immortal\Support\Collection  $recipients
      * @return bool
      */
     protected function recipientsMatch($expected, $recipients)
@@ -114,7 +114,7 @@ class MailFake implements Mailer
      *
      * @param  string  $mailable
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \Immortal\Support\Collection
      */
     public function sent($mailable, $callback = null)
     {
@@ -146,7 +146,7 @@ class MailFake implements Mailer
      * Get all of the mailed mailables for a given type.
      *
      * @param  string  $type
-     * @return \Illuminate\Support\Collection
+     * @return \Immortal\Support\Collection
      */
     protected function mailablesOf($type)
     {

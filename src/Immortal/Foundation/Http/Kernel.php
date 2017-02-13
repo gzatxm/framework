@@ -1,15 +1,17 @@
 <?php
-
-namespace Illuminate\Foundation\Http;
+/**
+ * 核心
+ */
+namespace Immortal\Foundation\Http;
 
 use Exception;
 use Throwable;
-use Illuminate\Routing\Router;
-use Illuminate\Routing\Pipeline;
-use Illuminate\Support\Facades\Facade;
-use Illuminate\Contracts\Debug\ExceptionHandler;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\Http\Kernel as KernelContract;
+use Immortal\Routing\Router;
+use Immortal\Routing\Pipeline;
+use Immortal\Support\Facades\Facade;
+use Immortal\Contracts\Debug\ExceptionHandler;
+use Immortal\Contracts\Foundation\Application;
+use Immortal\Contracts\Http\Kernel as KernelContract;
 use Symfony\Component\Debug\Exception\FatalThrowableError;
 
 class Kernel implements KernelContract
@@ -17,14 +19,14 @@ class Kernel implements KernelContract
     /**
      * The application implementation.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \Immortal\Contracts\Foundation\Application
      */
     protected $app;
 
     /**
      * The router instance.
      *
-     * @var \Illuminate\Routing\Router
+     * @var \Immortal\Routing\Router
      */
     protected $router;
 
@@ -34,13 +36,13 @@ class Kernel implements KernelContract
      * @var array
      */
     protected $bootstrappers = [
-        'Illuminate\Foundation\Bootstrap\DetectEnvironment',
-        'Illuminate\Foundation\Bootstrap\LoadConfiguration',
-        'Illuminate\Foundation\Bootstrap\ConfigureLogging',
-        'Illuminate\Foundation\Bootstrap\HandleExceptions',
-        'Illuminate\Foundation\Bootstrap\RegisterFacades',
-        'Illuminate\Foundation\Bootstrap\RegisterProviders',
-        'Illuminate\Foundation\Bootstrap\BootProviders',
+        'Immortal\Foundation\Bootstrap\DetectEnvironment',
+        'Immortal\Foundation\Bootstrap\LoadConfiguration',
+        'Immortal\Foundation\Bootstrap\ConfigureLogging',
+        'Immortal\Foundation\Bootstrap\HandleExceptions',
+        'Immortal\Foundation\Bootstrap\RegisterFacades',
+        'Immortal\Foundation\Bootstrap\RegisterProviders',
+        'Immortal\Foundation\Bootstrap\BootProviders',
     ];
 
     /**
@@ -72,19 +74,19 @@ class Kernel implements KernelContract
      * @var array
      */
     protected $middlewarePriority = [
-        \Illuminate\Session\Middleware\StartSession::class,
-        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \Illuminate\Auth\Middleware\Authenticate::class,
-        \Illuminate\Session\Middleware\AuthenticateSession::class,
-        \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        \Illuminate\Auth\Middleware\Authorize::class,
+        \Immortal\Session\Middleware\StartSession::class,
+        \Immortal\View\Middleware\ShareErrorsFromSession::class,
+        \Immortal\Auth\Middleware\Authenticate::class,
+        \Immortal\Session\Middleware\AuthenticateSession::class,
+        \Immortal\Routing\Middleware\SubstituteBindings::class,
+        \Immortal\Auth\Middleware\Authorize::class,
     ];
 
     /**
      * Create a new HTTP kernel instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
-     * @param  \Illuminate\Routing\Router  $router
+     * @param  \Immortal\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Routing\Router  $router
      * @return void
      */
     public function __construct(Application $app, Router $router)
@@ -106,8 +108,8 @@ class Kernel implements KernelContract
     /**
      * Handle an incoming HTTP request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \Immortal\Http\Request  $request
+     * @return \Immortal\Http\Response
      */
     public function handle($request)
     {
@@ -133,8 +135,8 @@ class Kernel implements KernelContract
     /**
      * Send the given request through the middleware / router.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \Immortal\Http\Request  $request
+     * @return \Immortal\Http\Response
      */
     protected function sendRequestThroughRouter($request)
     {
@@ -153,8 +155,8 @@ class Kernel implements KernelContract
     /**
      * Call the terminate method on any terminable middleware.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Illuminate\Http\Response  $response
+     * @param  \Immortal\Http\Request  $request
+     * @param  \Immortal\Http\Response  $response
      * @return void
      */
     public function terminate($request, $response)
@@ -184,7 +186,7 @@ class Kernel implements KernelContract
     /**
      * Gather the route middleware for the given request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return array
      */
     protected function gatherRouteMiddleware($request)
@@ -304,7 +306,7 @@ class Kernel implements KernelContract
     /**
      * Render the exception to a response.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  \Exception  $e
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -316,7 +318,7 @@ class Kernel implements KernelContract
     /**
      * Get the Laravel application instance.
      *
-     * @return \Illuminate\Contracts\Foundation\Application
+     * @return \Immortal\Contracts\Foundation\Application
      */
     public function getApplication()
     {

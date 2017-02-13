@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Immortal\Support;
 
 use Doctrine\Common\Inflector\Inflector;
 

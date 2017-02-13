@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
 use Psy\Shell;
 use Psy\Configuration;
-use Illuminate\Console\Command;
+use Immortal\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 
 class TinkerCommand extends Command
@@ -80,9 +80,9 @@ class TinkerCommand extends Command
     protected function getCasters()
     {
         return [
-            'Illuminate\Foundation\Application' => 'Illuminate\Foundation\Console\IlluminateCaster::castApplication',
-            'Illuminate\Support\Collection' => 'Illuminate\Foundation\Console\IlluminateCaster::castCollection',
-            'Illuminate\Database\Eloquent\Model' => 'Illuminate\Foundation\Console\IlluminateCaster::castModel',
+            'Immortal\Foundation\Application' => 'Immortal\Foundation\Console\ImmortalCaster::castApplication',
+            'Immortal\Support\Collection' => 'Immortal\Foundation\Console\ImmortalCaster::castCollection',
+            'Immortal\Database\Eloquent\Model' => 'Immortal\Foundation\Console\ImmortalCaster::castModel',
         ];
     }
 

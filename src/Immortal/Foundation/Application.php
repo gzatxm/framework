@@ -13,7 +13,7 @@ use Immortal\Container\Container;
 //use Immortal\Filesystem\Filesystem;
 use Immortal\Support\ServiceProvider;
 use Immortal\Events\EventServiceProvider;
-//use Immortal\Routing\RoutingServiceProvider;
+use Immortal\Routing\RoutingServiceProvider;
 use Immortal\Contract\Foundation\Application as ApplicationContract;
 
 class Application extends Container implements ApplicationContract
@@ -131,9 +131,8 @@ class Application extends Container implements ApplicationContract
     protected $namespace;
 
     /**
-     * Create a new Immortal application instance.
-     *
-     * @param  string|null  $basePath
+     * 创建应用
+     * @param  string|null $basePath 应用路径
      * @return void
      */
     public function __construct($basePath = null)
@@ -160,8 +159,7 @@ class Application extends Container implements ApplicationContract
     }
 
     /**
-     * Register the basic bindings into the container.
-     *
+     * 注册基本绑定
      * @return void
      */
     protected function registerBaseBindings()
@@ -174,8 +172,7 @@ class Application extends Container implements ApplicationContract
     }
 
     /**
-     * Register all of the base service providers.
-     *
+     * 注册基本服务
      * @return void
      */
     protected function registerBaseServiceProviders()
@@ -548,7 +545,7 @@ class Application extends Container implements ApplicationContract
      */
     public function register($provider, $options = [], $force = false)
     {
-        if (($registered = $this->getProvider($provider)) && ! $force) {
+        if (($registered = $this->getProvider($provider)) && !$force) {
             return $registered;
         }
 
@@ -1063,8 +1060,7 @@ class Application extends Container implements ApplicationContract
     }
 
     /**
-     * Register the core class aliases in the container.
-     *
+     * 注册核心类别名
      * @return void
      */
     public function registerCoreContainerAliases()

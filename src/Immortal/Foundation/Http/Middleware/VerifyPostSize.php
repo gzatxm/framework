@@ -1,20 +1,20 @@
 <?php
 
-namespace Illuminate\Foundation\Http\Middleware;
+namespace Immortal\Foundation\Http\Middleware;
 
 use Closure;
-use Illuminate\Http\Exception\PostTooLargeException;
+use Immortal\Http\Exception\PostTooLargeException;
 
 class VerifyPostSize
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  \Closure  $next
      * @return mixed
      *
-     * @throws \Illuminate\Http\Exception\PostTooLargeException
+     * @throws \Immortal\Http\Exception\PostTooLargeException
      */
     public function handle($request, Closure $next)
     {

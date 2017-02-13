@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
-use Illuminate\Console\GeneratorCommand;
+use Immortal\Console\GeneratorCommand;
 
 class EventMakeCommand extends GeneratorCommand
 {

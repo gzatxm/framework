@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
-use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
+use Immortal\Console\Command;
+use Immortal\Filesystem\Filesystem;
 
 class RouteClearCommand extends Command
 {
@@ -24,14 +24,14 @@ class RouteClearCommand extends Command
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \Immortal\Filesystem\Filesystem
      */
     protected $files;
 
     /**
      * Create a new route clear command instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \Immortal\Filesystem\Filesystem  $files
      * @return void
      */
     public function __construct(Filesystem $files)

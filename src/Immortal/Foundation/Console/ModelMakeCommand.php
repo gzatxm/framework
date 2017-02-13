@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
-use Illuminate\Support\Str;
-use Illuminate\Console\GeneratorCommand;
+use Immortal\Support\Str;
+use Immortal\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 
 class ModelMakeCommand extends GeneratorCommand

@@ -1,16 +1,16 @@
 <?php
 
-namespace Illuminate\Foundation\Bootstrap;
+namespace Immortal\Foundation\Bootstrap;
 
-use Illuminate\Http\Request;
-use Illuminate\Contracts\Foundation\Application;
+use Immortal\Http\Request;
+use Immortal\Contracts\Foundation\Application;
 
 class SetRequestForConsole
 {
     /**
      * Bootstrap the given application.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @return void
      */
     public function bootstrap(Application $app)

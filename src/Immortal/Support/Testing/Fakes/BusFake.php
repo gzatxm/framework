@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace Immortal\Support\Testing\Fakes;
 
-use Illuminate\Contracts\Bus\Dispatcher;
+use Immortal\Contracts\Bus\Dispatcher;
 use PHPUnit_Framework_Assert as PHPUnit;
 
 class BusFake implements Dispatcher
@@ -49,7 +49,7 @@ class BusFake implements Dispatcher
      *
      * @param  string  $command
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \Immortal\Support\Collection
      */
     public function dispatched($command, $callback = null)
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Foundation\Bootstrap;
+namespace Immortal\Foundation\Bootstrap;
 
 use Exception;
 use ErrorException;
-use Illuminate\Contracts\Foundation\Application;
+use Immortal\Contracts\Foundation\Application;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\Debug\Exception\FatalErrorException;
 use Symfony\Component\Debug\Exception\FatalThrowableError;
@@ -14,14 +14,14 @@ class HandleExceptions
     /**
      * The application instance.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \Immortal\Contracts\Foundation\Application
      */
     protected $app;
 
     /**
      * Bootstrap the given application.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @return void
      */
     public function bootstrap(Application $app)
@@ -147,10 +147,10 @@ class HandleExceptions
     /**
      * Get an instance of the exception handler.
      *
-     * @return \Illuminate\Contracts\Debug\ExceptionHandler
+     * @return \Immortal\Contracts\Debug\ExceptionHandler
      */
     protected function getExceptionHandler()
     {
-        return $this->app->make('Illuminate\Contracts\Debug\ExceptionHandler');
+        return $this->app->make('Immortal\Contracts\Debug\ExceptionHandler');
     }
 }

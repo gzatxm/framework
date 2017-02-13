@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Concerns;
+namespace Immortal\Foundation\Testing\Concerns;
 
-use Illuminate\Contracts\Auth\Authenticatable as UserContract;
+use Immortal\Contracts\Auth\Authenticatable as UserContract;
 
 trait ImpersonatesUsers
 {
     /**
      * Set the currently logged in user for the application.
      *
-     * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+     * @param  \Immortal\Contracts\Auth\Authenticatable  $user
      * @param  string|null  $driver
      * @return $this
      */
@@ -21,7 +21,7 @@ trait ImpersonatesUsers
     /**
      * Set the currently logged in user for the application.
      *
-     * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+     * @param  \Immortal\Contracts\Auth\Authenticatable  $user
      * @param  string|null  $driver
      * @return $this
      */

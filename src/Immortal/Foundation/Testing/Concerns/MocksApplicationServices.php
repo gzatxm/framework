@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Concerns;
+namespace Immortal\Foundation\Testing\Concerns;
 
 use Mockery;
 use Exception;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
+use Immortal\Database\Eloquent\Model;
+use Immortal\Contracts\Notifications\Dispatcher as NotificationDispatcher;
 
 trait MocksApplicationServices
 {
@@ -98,7 +98,7 @@ trait MocksApplicationServices
      */
     protected function withoutEvents()
     {
-        $mock = Mockery::mock('Illuminate\Contracts\Events\Dispatcher');
+        $mock = Mockery::mock('Immortal\Contracts\Events\Dispatcher');
 
         $mock->shouldReceive('fire')->andReturnUsing(function ($called) {
             $this->firedEvents[] = $called;
@@ -190,7 +190,7 @@ trait MocksApplicationServices
      */
     protected function withoutModelEvents()
     {
-        $mock = Mockery::mock('Illuminate\Contracts\Events\Dispatcher');
+        $mock = Mockery::mock('Immortal\Contracts\Events\Dispatcher');
 
         $mock->shouldReceive('fire')->andReturnUsing(function ($called) {
             $this->firedModelEvents[] = $called;
@@ -311,14 +311,14 @@ trait MocksApplicationServices
      */
     protected function withoutJobs()
     {
-        $mock = Mockery::mock('Illuminate\Contracts\Bus\Dispatcher');
+        $mock = Mockery::mock('Immortal\Contracts\Bus\Dispatcher');
 
         $mock->shouldReceive('dispatch', 'dispatchNow')->andReturnUsing(function ($dispatched) {
             $this->dispatchedJobs[] = $dispatched;
         });
 
         $this->app->instance(
-            'Illuminate\Contracts\Bus\Dispatcher', $mock
+            'Immortal\Contracts\Bus\Dispatcher', $mock
         );
 
         return $this;

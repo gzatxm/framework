@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Auth\AuthManager
- * @see \Illuminate\Contracts\Auth\Factory
- * @see \Illuminate\Contracts\Auth\Guard
- * @see \Illuminate\Contracts\Auth\StatefulGuard
+ * @see \Immortal\Auth\AuthManager
+ * @see \Immortal\Contracts\Auth\Factory
+ * @see \Immortal\Contracts\Auth\Guard
+ * @see \Immortal\Contracts\Auth\StatefulGuard
  */
 class Auth extends Facade
 {

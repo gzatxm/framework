@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
 use Closure;
 use ReflectionFunction;
-use Illuminate\Console\Command;
+use Immortal\Console\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

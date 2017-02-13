@@ -1,17 +1,17 @@
 <?php
 
-namespace Illuminate\Foundation\Bootstrap;
+namespace Immortal\Foundation\Bootstrap;
 
-use Illuminate\Foundation\AliasLoader;
-use Illuminate\Support\Facades\Facade;
-use Illuminate\Contracts\Foundation\Application;
+use Immortal\Foundation\AliasLoader;
+use Immortal\Support\Facades\Facade;
+use Immortal\Contracts\Foundation\Application;
 
 class RegisterFacades
 {
     /**
      * Bootstrap the given application.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @return void
      */
     public function bootstrap(Application $app)

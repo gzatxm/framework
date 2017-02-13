@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Foundation\Testing;
+namespace Immortal\Foundation\Testing;
 
 use Mockery;
 use PHPUnit_Framework_TestCase;
-use Illuminate\Support\Facades\Facade;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Console\Application as Artisan;
+use Immortal\Support\Facades\Facade;
+use Immortal\Database\Eloquent\Model;
+use Immortal\Console\Application as Artisan;
 
 abstract class TestCase extends PHPUnit_Framework_TestCase
 {
@@ -20,9 +20,9 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
         Concerns\MocksApplicationServices;
 
     /**
-     * The Illuminate application instance.
+     * The Immortal application instance.
      *
-     * @var \Illuminate\Foundation\Application
+     * @var \Immortal\Foundation\Application
      */
     protected $app;
 

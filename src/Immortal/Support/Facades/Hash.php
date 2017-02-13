@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Hashing\BcryptHasher
+ * @see \Immortal\Hashing\BcryptHasher
  */
 class Hash extends Facade
 {

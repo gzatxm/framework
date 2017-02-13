@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace Immortal\Support\Testing\Fakes;
 
 use Ramsey\Uuid\Uuid;
-use Illuminate\Support\Collection;
+use Immortal\Support\Collection;
 use PHPUnit_Framework_Assert as PHPUnit;
-use Illuminate\Contracts\Notifications\Factory as NotificationFactory;
+use Immortal\Contracts\Notifications\Factory as NotificationFactory;
 
 class NotificationFake implements NotificationFactory
 {
@@ -70,7 +70,7 @@ class NotificationFake implements NotificationFactory
      * @param  mixed  $notifiable
      * @param  string  $notification
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \Immortal\Support\Collection
      */
     public function sent($notifiable, $notification, $callback = null)
     {
@@ -120,7 +120,7 @@ class NotificationFake implements NotificationFactory
     /**
      * Send the given notification to the given notifiable entities.
      *
-     * @param  \Illuminate\Support\Collection|array|mixed  $notifiables
+     * @param  \Immortal\Support\Collection|array|mixed  $notifiables
      * @param  mixed  $notification
      * @return void
      */
@@ -132,7 +132,7 @@ class NotificationFake implements NotificationFactory
     /**
      * Send the given notification immediately.
      *
-     * @param  \Illuminate\Support\Collection|array|mixed  $notifiables
+     * @param  \Immortal\Support\Collection|array|mixed  $notifiables
      * @param  mixed  $notification
      * @return void
      */

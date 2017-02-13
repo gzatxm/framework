@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\View\Compilers\BladeCompiler
+ * @see \Immortal\View\Compilers\BladeCompiler
  */
 class Blade extends Facade
 {

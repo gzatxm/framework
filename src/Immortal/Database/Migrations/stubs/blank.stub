@@ -1,0 +1,28 @@
+<?php
+
+use Immortal\Support\Facades\Schema;
+use Immortal\Database\Schema\Blueprint;
+use Immortal\Database\Migrations\Migration;
+
+class DummyClass extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        //
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}

@@ -1,19 +1,19 @@
 <?php
 
-namespace Illuminate\Foundation\Auth;
+namespace Immortal\Foundation\Auth;
 
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
-use Illuminate\Cache\RateLimiter;
-use Illuminate\Auth\Events\Lockout;
-use Illuminate\Support\Facades\Lang;
+use Immortal\Support\Str;
+use Immortal\Http\Request;
+use Immortal\Cache\RateLimiter;
+use Immortal\Auth\Events\Lockout;
+use Immortal\Support\Facades\Lang;
 
 trait ThrottlesLogins
 {
     /**
      * Determine if the user has too many failed login attempts.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return bool
      */
     protected function hasTooManyLoginAttempts(Request $request)
@@ -26,7 +26,7 @@ trait ThrottlesLogins
     /**
      * Increment the login attempts for the user.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return int
      */
     protected function incrementLoginAttempts(Request $request)
@@ -37,8 +37,8 @@ trait ThrottlesLogins
     /**
      * Redirect the user after determining they are locked out.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param  \Immortal\Http\Request  $request
+     * @return \Immortal\Http\RedirectResponse
      */
     protected function sendLockoutResponse(Request $request)
     {
@@ -56,7 +56,7 @@ trait ThrottlesLogins
     /**
      * Clear the login locks for the given user credentials.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return void
      */
     protected function clearLoginAttempts(Request $request)
@@ -67,7 +67,7 @@ trait ThrottlesLogins
     /**
      * Fire an event when a lockout occurs.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return void
      */
     protected function fireLockoutEvent(Request $request)
@@ -78,7 +78,7 @@ trait ThrottlesLogins
     /**
      * Get the throttle key for the given request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return string
      */
     protected function throttleKey(Request $request)
@@ -89,7 +89,7 @@ trait ThrottlesLogins
     /**
      * Get the rate limiter instance.
      *
-     * @return \Illuminate\Cache\RateLimiter
+     * @return \Immortal\Cache\RateLimiter
      */
     protected function limiter()
     {

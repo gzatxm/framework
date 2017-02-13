@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Contracts\Auth\Access\Gate
+ * @see \Immortal\Contracts\Auth\Access\Gate
  */
 class Gate extends Facade
 {
@@ -14,6 +14,6 @@ class Gate extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Contracts\Auth\Access\Gate';
+        return 'Immortal\Contracts\Auth\Access\Gate';
     }
 }

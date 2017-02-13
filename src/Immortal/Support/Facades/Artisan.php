@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Contracts\Console\Kernel
+ * @see \Immortal\Contracts\Console\Kernel
  */
 class Artisan extends Facade
 {
@@ -14,6 +14,6 @@ class Artisan extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Contracts\Console\Kernel';
+        return 'Immortal\Contracts\Console\Kernel';
     }
 }

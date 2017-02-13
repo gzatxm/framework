@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Filesystem\FilesystemManager
+ * @see \Immortal\Filesystem\FilesystemManager
  */
 class Storage extends Facade
 {

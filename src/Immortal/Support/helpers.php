@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Debug\Dumper;
-use Illuminate\Contracts\Support\Htmlable;
+use Immortal\Support\Arr;
+use Immortal\Support\Str;
+use Immortal\Support\Collection;
+use Immortal\Support\Debug\Dumper;
+use Immortal\Contracts\Support\Htmlable;
 
 if (! function_exists('append_config')) {
     /**
@@ -358,7 +358,7 @@ if (! function_exists('collect')) {
      * Create a collection from the given value.
      *
      * @param  mixed  $value
-     * @return \Illuminate\Support\Collection
+     * @return \Immortal\Support\Collection
      */
     function collect($value = null)
     {
@@ -507,7 +507,7 @@ if (! function_exists('e')) {
     /**
      * Escape HTML special characters in a string.
      *
-     * @param  \Illuminate\Contracts\Support\Htmlable|string  $value
+     * @param  \Immortal\Contracts\Support\Htmlable|string  $value
      * @return string
      */
     function e($value)

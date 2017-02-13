@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
 use Closure;
 use Exception;
 use Throwable;
-use Illuminate\Console\Scheduling\Schedule;
-use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Console\Application as Artisan;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\Console\Kernel as KernelContract;
+use Immortal\Console\Scheduling\Schedule;
+use Immortal\Contracts\Events\Dispatcher;
+use Immortal\Console\Application as Artisan;
+use Immortal\Contracts\Foundation\Application;
+use Immortal\Contracts\Console\Kernel as KernelContract;
 use Symfony\Component\Debug\Exception\FatalThrowableError;
 
 class Kernel implements KernelContract
@@ -17,21 +17,21 @@ class Kernel implements KernelContract
     /**
      * The application implementation.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \Immortal\Contracts\Foundation\Application
      */
     protected $app;
 
     /**
      * The event dispatcher implementation.
      *
-     * @var \Illuminate\Contracts\Events\Dispatcher
+     * @var \Immortal\Contracts\Events\Dispatcher
      */
     protected $events;
 
     /**
      * The Artisan application instance.
      *
-     * @var \Illuminate\Console\Application
+     * @var \Immortal\Console\Application
      */
     protected $artisan;
 
@@ -55,21 +55,21 @@ class Kernel implements KernelContract
      * @var array
      */
     protected $bootstrappers = [
-        'Illuminate\Foundation\Bootstrap\DetectEnvironment',
-        'Illuminate\Foundation\Bootstrap\LoadConfiguration',
-        'Illuminate\Foundation\Bootstrap\ConfigureLogging',
-        'Illuminate\Foundation\Bootstrap\HandleExceptions',
-        'Illuminate\Foundation\Bootstrap\RegisterFacades',
-        'Illuminate\Foundation\Bootstrap\SetRequestForConsole',
-        'Illuminate\Foundation\Bootstrap\RegisterProviders',
-        'Illuminate\Foundation\Bootstrap\BootProviders',
+        'Immortal\Foundation\Bootstrap\DetectEnvironment',
+        'Immortal\Foundation\Bootstrap\LoadConfiguration',
+        'Immortal\Foundation\Bootstrap\ConfigureLogging',
+        'Immortal\Foundation\Bootstrap\HandleExceptions',
+        'Immortal\Foundation\Bootstrap\RegisterFacades',
+        'Immortal\Foundation\Bootstrap\SetRequestForConsole',
+        'Immortal\Foundation\Bootstrap\RegisterProviders',
+        'Immortal\Foundation\Bootstrap\BootProviders',
     ];
 
     /**
      * Create a new console kernel instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
+     * @param  \Immortal\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Events\Dispatcher  $events
      * @return void
      */
     public function __construct(Application $app, Dispatcher $events)
@@ -94,7 +94,7 @@ class Kernel implements KernelContract
     protected function defineConsoleSchedule()
     {
         $this->app->instance(
-            'Illuminate\Console\Scheduling\Schedule', $schedule = new Schedule
+            'Immortal\Console\Scheduling\Schedule', $schedule = new Schedule
         );
 
         $this->schedule($schedule);
@@ -151,7 +151,7 @@ class Kernel implements KernelContract
     /**
      * Define the application's command schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param  \Immortal\Console\Scheduling\Schedule  $schedule
      * @return void
      */
     protected function schedule(Schedule $schedule)
@@ -174,7 +174,7 @@ class Kernel implements KernelContract
      *
      * @param  string  $signature
      * @param  Closure  $callback
-     * @return \Illuminate\Foundation\Console\ClosureCommand
+     * @return \Immortal\Foundation\Console\ClosureCommand
      */
     public function command($signature, Closure $callback)
     {
@@ -227,8 +227,8 @@ class Kernel implements KernelContract
      */
     public function queue($command, array $parameters = [])
     {
-        $this->app['Illuminate\Contracts\Queue\Queue']->push(
-            'Illuminate\Foundation\Console\QueuedJob', func_get_args()
+        $this->app['Immortal\Contracts\Queue\Queue']->push(
+            'Immortal\Foundation\Console\QueuedJob', func_get_args()
         );
     }
 
@@ -276,7 +276,7 @@ class Kernel implements KernelContract
     /**
      * Get the Artisan application instance.
      *
-     * @return \Illuminate\Console\Application
+     * @return \Immortal\Console\Application
      */
     protected function getArtisan()
     {
@@ -291,7 +291,7 @@ class Kernel implements KernelContract
     /**
      * Set the Artisan application instance.
      *
-     * @param  \Illuminate\Console\Application  $artisan
+     * @param  \Immortal\Console\Application  $artisan
      * @return void
      */
     public function setArtisan($artisan)
@@ -317,7 +317,7 @@ class Kernel implements KernelContract
      */
     protected function reportException(Exception $e)
     {
-        $this->app['Illuminate\Contracts\Debug\ExceptionHandler']->report($e);
+        $this->app['Immortal\Contracts\Debug\ExceptionHandler']->report($e);
     }
 
     /**
@@ -329,6 +329,6 @@ class Kernel implements KernelContract
      */
     protected function renderException($output, Exception $e)
     {
-        $this->app['Illuminate\Contracts\Debug\ExceptionHandler']->renderForConsole($output, $e);
+        $this->app['Immortal\Contracts\Debug\ExceptionHandler']->renderForConsole($output, $e);
     }
 }

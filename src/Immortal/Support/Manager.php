@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Immortal\Support;
 
 use Closure;
 use InvalidArgumentException;
@@ -10,7 +10,7 @@ abstract class Manager
     /**
      * The application instance.
      *
-     * @var \Illuminate\Foundation\Application
+     * @var \Immortal\Foundation\Application
      */
     protected $app;
 
@@ -31,7 +31,7 @@ abstract class Manager
     /**
      * Create a new manager instance.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  \Immortal\Foundation\Application  $app
      * @return void
      */
     public function __construct($app)

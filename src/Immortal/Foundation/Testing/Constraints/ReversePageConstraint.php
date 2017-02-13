@@ -1,20 +1,20 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Constraints;
+namespace Immortal\Foundation\Testing\Constraints;
 
 class ReversePageConstraint extends PageConstraint
 {
     /**
      * The page constraint instance.
      *
-     * @var \Illuminate\Foundation\Testing\Constraints\PageConstraint
+     * @var \Immortal\Foundation\Testing\Constraints\PageConstraint
      */
     protected $pageConstraint;
 
     /**
      * Create a new reverse page constraint instance.
      *
-     * @param  \Illuminate\Foundation\Testing\Constraints\PageConstraint  $pageConstraint
+     * @param  \Immortal\Foundation\Testing\Constraints\PageConstraint  $pageConstraint
      * @return void
      */
     public function __construct(PageConstraint $pageConstraint)

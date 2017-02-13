@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Concerns;
+namespace Immortal\Foundation\Testing\Concerns;
 
 trait InteractsWithDatabase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Routing\UrlGenerator
+ * @see \Immortal\Routing\UrlGenerator
  */
 class URL extends Facade
 {

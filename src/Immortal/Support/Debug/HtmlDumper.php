@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Debug;
+namespace Immortal\Support\Debug;
 
 use Symfony\Component\VarDumper\Dumper\HtmlDumper as SymfonyHtmlDumper;
 

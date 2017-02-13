@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Foundation\Auth;
+namespace Immortal\Foundation\Auth;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Auth\Events\Registered;
+use Immortal\Http\Request;
+use Immortal\Support\Facades\Auth;
+use Immortal\Auth\Events\Registered;
 
 trait RegistersUsers
 {
@@ -13,7 +13,7 @@ trait RegistersUsers
     /**
      * Show the application registration form.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Immortal\Http\Response
      */
     public function showRegistrationForm()
     {
@@ -23,8 +23,8 @@ trait RegistersUsers
     /**
      * Handle a registration request for the application.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \Immortal\Http\Request  $request
+     * @return \Immortal\Http\Response
      */
     public function register(Request $request)
     {
@@ -41,7 +41,7 @@ trait RegistersUsers
     /**
      * Get the guard to be used during registration.
      *
-     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     * @return \Immortal\Contracts\Auth\StatefulGuard
      */
     protected function guard()
     {
@@ -51,7 +51,7 @@ trait RegistersUsers
     /**
      * The user has been registered.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  mixed  $user
      * @return mixed
      */

@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Contracts\Broadcasting\Factory
+ * @see \Immortal\Contracts\Broadcasting\Factory
  */
 class Broadcast extends Facade
 {
@@ -14,6 +14,6 @@ class Broadcast extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Contracts\Broadcasting\Factory';
+        return 'Immortal\Contracts\Broadcasting\Factory';
     }
 }

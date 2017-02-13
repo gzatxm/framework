@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation\Testing;
+namespace Immortal\Foundation\Testing;
 
-use Illuminate\Contracts\Console\Kernel;
+use Immortal\Contracts\Console\Kernel;
 
 trait DatabaseMigrations
 {

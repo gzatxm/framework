@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
-use Illuminate\Console\Command;
+use Immortal\Console\Command;
 use League\Flysystem\MountManager;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\ServiceProvider;
+use Immortal\Filesystem\Filesystem;
+use Immortal\Support\ServiceProvider;
 use League\Flysystem\Filesystem as Flysystem;
 use League\Flysystem\Adapter\Local as LocalAdapter;
 
@@ -14,7 +14,7 @@ class VendorPublishCommand extends Command
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \Immortal\Filesystem\Filesystem
      */
     protected $files;
 
@@ -37,7 +37,7 @@ class VendorPublishCommand extends Command
     /**
      * Create a new command instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \Immortal\Filesystem\Filesystem  $files
      * @return void
      */
     public function __construct(Filesystem $files)

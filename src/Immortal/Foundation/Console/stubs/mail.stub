@@ -2,10 +2,10 @@
 
 namespace DummyNamespace;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Mail\Mailable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use Immortal\Bus\Queueable;
+use Immortal\Mail\Mailable;
+use Immortal\Queue\SerializesModels;
+use Immortal\Contracts\Queue\ShouldQueue;
 
 class DummyClass extends Mailable
 {

@@ -1,18 +1,18 @@
 <?php
 
-use Illuminate\Support\Str;
-use Illuminate\Support\HtmlString;
-use Illuminate\Container\Container;
-use Illuminate\Contracts\Bus\Dispatcher;
-use Illuminate\Contracts\Auth\Access\Gate;
-use Illuminate\Contracts\Routing\UrlGenerator;
-use Illuminate\Contracts\Routing\ResponseFactory;
-use Illuminate\Contracts\Auth\Factory as AuthFactory;
-use Illuminate\Contracts\View\Factory as ViewFactory;
-use Illuminate\Contracts\Cookie\Factory as CookieFactory;
-use Illuminate\Database\Eloquent\Factory as EloquentFactory;
-use Illuminate\Contracts\Validation\Factory as ValidationFactory;
-use Illuminate\Contracts\Broadcasting\Factory as BroadcastFactory;
+use Immortal\Support\Str;
+use Immortal\Support\HtmlString;
+use Immortal\Container\Container;
+use Immortal\Contracts\Bus\Dispatcher;
+use Immortal\Contracts\Auth\Access\Gate;
+use Immortal\Contracts\Routing\UrlGenerator;
+use Immortal\Contracts\Routing\ResponseFactory;
+use Immortal\Contracts\Auth\Factory as AuthFactory;
+use Immortal\Contracts\View\Factory as ViewFactory;
+use Immortal\Contracts\Cookie\Factory as CookieFactory;
+use Immortal\Database\Eloquent\Factory as EloquentFactory;
+use Immortal\Contracts\Validation\Factory as ValidationFactory;
+use Immortal\Contracts\Broadcasting\Factory as BroadcastFactory;
 
 if (! function_exists('abort')) {
     /**
@@ -95,7 +95,7 @@ if (! function_exists('app')) {
      *
      * @param  string  $make
      * @param  array   $parameters
-     * @return mixed|\Illuminate\Foundation\Application
+     * @return mixed|\Immortal\Foundation\Application
      */
     function app($make = null, $parameters = [])
     {
@@ -139,7 +139,7 @@ if (! function_exists('auth')) {
      * Get the available auth instance.
      *
      * @param  string|null  $guard
-     * @return \Illuminate\Contracts\Auth\Factory|\Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard
+     * @return \Immortal\Contracts\Auth\Factory|\Immortal\Contracts\Auth\Guard|\Immortal\Contracts\Auth\StatefulGuard
      */
     function auth($guard = null)
     {
@@ -158,7 +158,7 @@ if (! function_exists('back')) {
      * @param  int    $status
      * @param  array  $headers
      * @param  string  $fallback
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Immortal\Http\RedirectResponse
      */
     function back($status = 302, $headers = [], $fallback = false)
     {
@@ -198,7 +198,7 @@ if (! function_exists('broadcast')) {
      * Begin broadcasting an event.
      *
      * @param  mixed|null  $event
-     * @return \Illuminate\Broadcasting\PendingBroadcast|void
+     * @return \Immortal\Broadcasting\PendingBroadcast|void
      */
     function broadcast($event = null)
     {
@@ -307,7 +307,7 @@ if (! function_exists('csrf_field')) {
     /**
      * Generate a CSRF token form field.
      *
-     * @return \Illuminate\Support\HtmlString
+     * @return \Immortal\Support\HtmlString
      */
     function csrf_field()
     {
@@ -486,7 +486,7 @@ if (! function_exists('factory')) {
      * Create a model factory builder for a given class, name, and amount.
      *
      * @param  dynamic  class|class,name|class,amount|class,name,amount
-     * @return \Illuminate\Database\Eloquent\FactoryBuilder
+     * @return \Immortal\Database\Eloquent\FactoryBuilder
      */
     function factory()
     {
@@ -524,7 +524,7 @@ if (! function_exists('logger')) {
      *
      * @param  string  $message
      * @param  array  $context
-     * @return \Illuminate\Contracts\Logging\Log|null
+     * @return \Immortal\Contracts\Logging\Log|null
      */
     function logger($message = null, array $context = [])
     {
@@ -541,7 +541,7 @@ if (! function_exists('method_field')) {
      * Generate a form field to spoof the HTTP verb used by forms.
      *
      * @param  string  $method
-     * @return \Illuminate\Support\HtmlString
+     * @return \Immortal\Support\HtmlString
      */
     function method_field($method)
     {
@@ -599,7 +599,7 @@ if (! function_exists('redirect')) {
      * @param  int     $status
      * @param  array   $headers
      * @param  bool    $secure
-     * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
+     * @return \Immortal\Routing\Redirector|\Immortal\Http\RedirectResponse
      */
     function redirect($to = null, $status = 302, $headers = [], $secure = null)
     {
@@ -617,7 +617,7 @@ if (! function_exists('request')) {
      *
      * @param  array|string  $key
      * @param  mixed   $default
-     * @return \Illuminate\Http\Request|string|array
+     * @return \Immortal\Http\Request|string|array
      */
     function request($key = null, $default = null)
     {
@@ -667,7 +667,7 @@ if (! function_exists('response')) {
      * @param  string  $content
      * @param  int     $status
      * @param  array   $headers
-     * @return \Symfony\Component\HttpFoundation\Response|\Illuminate\Contracts\Routing\ResponseFactory
+     * @return \Symfony\Component\HttpFoundation\Response|\Immortal\Contracts\Routing\ResponseFactory
      */
     function response($content = '', $status = 200, array $headers = [])
     {
@@ -804,7 +804,7 @@ if (! function_exists('url')) {
      * @param  string  $path
      * @param  mixed   $parameters
      * @param  bool    $secure
-     * @return \Illuminate\Contracts\Routing\UrlGenerator|string
+     * @return \Immortal\Contracts\Routing\UrlGenerator|string
      */
     function url($path = null, $parameters = [], $secure = null)
     {
@@ -824,7 +824,7 @@ if (! function_exists('validator')) {
      * @param  array  $rules
      * @param  array  $messages
      * @param  array  $customAttributes
-     * @return \Illuminate\Contracts\Validation\Validator
+     * @return \Immortal\Contracts\Validation\Validator
      */
     function validator(array $data = [], array $rules = [], array $messages = [], array $customAttributes = [])
     {
@@ -845,7 +845,7 @@ if (! function_exists('view')) {
      * @param  string  $view
      * @param  array   $data
      * @param  array   $mergeData
-     * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
+     * @return \Immortal\View\View|\Immortal\Contracts\View\Factory
      */
     function view($view = null, $data = [], $mergeData = [])
     {

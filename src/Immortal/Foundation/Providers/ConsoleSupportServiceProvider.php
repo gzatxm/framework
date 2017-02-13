@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation\Providers;
+namespace Immortal\Foundation\Providers;
 
-use Illuminate\Support\AggregateServiceProvider;
+use Immortal\Support\AggregateServiceProvider;
 
 class ConsoleSupportServiceProvider extends AggregateServiceProvider
 {
@@ -19,11 +19,11 @@ class ConsoleSupportServiceProvider extends AggregateServiceProvider
      * @var array
      */
     protected $providers = [
-        'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-        'Illuminate\Console\ScheduleServiceProvider',
-        'Illuminate\Database\MigrationServiceProvider',
-        'Illuminate\Database\SeedServiceProvider',
-        'Illuminate\Foundation\Providers\ComposerServiceProvider',
-        'Illuminate\Queue\ConsoleServiceProvider',
+        'Immortal\Foundation\Providers\ArtisanServiceProvider',
+        'Immortal\Console\ScheduleServiceProvider',
+        'Immortal\Database\MigrationServiceProvider',
+        'Immortal\Database\SeedServiceProvider',
+        'Immortal\Foundation\Providers\ComposerServiceProvider',
+        'Immortal\Queue\ConsoleServiceProvider',
     ];
 }

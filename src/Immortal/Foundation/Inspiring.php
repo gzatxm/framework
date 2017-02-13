@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation;
+namespace Immortal\Foundation;
 
-use Illuminate\Support\Collection;
+use Immortal\Support\Collection;
 
 class Inspiring
 {

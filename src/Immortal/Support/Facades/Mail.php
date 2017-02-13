@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
-use Illuminate\Support\Testing\Fakes\MailFake;
+use Immortal\Support\Testing\Fakes\MailFake;
 
 /**
- * @see \Illuminate\Mail\Mailer
+ * @see \Immortal\Mail\Mailer
  */
 class Mail extends Facade
 {

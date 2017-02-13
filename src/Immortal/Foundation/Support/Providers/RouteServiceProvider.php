@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Foundation\Support\Providers;
+namespace Immortal\Foundation\Support\Providers;
 
-use Illuminate\Routing\Router;
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Contracts\Routing\UrlGenerator;
+use Immortal\Routing\Router;
+use Immortal\Support\ServiceProvider;
+use Immortal\Contracts\Routing\UrlGenerator;
 
 class RouteServiceProvider extends ServiceProvider
 {

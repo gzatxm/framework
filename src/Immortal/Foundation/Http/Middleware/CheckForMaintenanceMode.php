@@ -1,24 +1,24 @@
 <?php
 
-namespace Illuminate\Foundation\Http\Middleware;
+namespace Immortal\Foundation\Http\Middleware;
 
 use Closure;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Foundation\Http\Exceptions\MaintenanceModeException;
+use Immortal\Contracts\Foundation\Application;
+use Immortal\Foundation\Http\Exceptions\MaintenanceModeException;
 
 class CheckForMaintenanceMode
 {
     /**
      * The application implementation.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \Immortal\Contracts\Foundation\Application
      */
     protected $app;
 
     /**
      * Create a new middleware instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @return void
      */
     public function __construct(Application $app)
@@ -29,7 +29,7 @@ class CheckForMaintenanceMode
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  \Closure  $next
      * @return mixed
      *

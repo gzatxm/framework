@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Foundation;
+namespace Immortal\Foundation;
 
 use Composer\Script\Event;
 

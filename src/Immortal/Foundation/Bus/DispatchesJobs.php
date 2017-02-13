@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation\Bus;
+namespace Immortal\Foundation\Bus;
 
-use Illuminate\Contracts\Bus\Dispatcher;
+use Immortal\Contracts\Bus\Dispatcher;
 
 trait DispatchesJobs
 {

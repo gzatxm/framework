@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Config\Repository
+ * @see \Immortal\Config\Repository
  */
 class Config extends Facade
 {

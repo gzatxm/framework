@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation\Auth\Access;
+namespace Immortal\Foundation\Auth\Access;
 
-use Illuminate\Contracts\Auth\Access\Gate;
+use Immortal\Contracts\Auth\Access\Gate;
 
 trait Authorizable
 {

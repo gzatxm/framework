@@ -1,18 +1,18 @@
 <?php
 
-namespace Illuminate\Foundation\Bootstrap;
+namespace Immortal\Foundation\Bootstrap;
 
 use Dotenv\Dotenv;
 use Dotenv\Exception\InvalidPathException;
 use Symfony\Component\Console\Input\ArgvInput;
-use Illuminate\Contracts\Foundation\Application;
+use Immortal\Contracts\Foundation\Application;
 
 class DetectEnvironment
 {
     /**
      * Bootstrap the given application.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @return void
      */
     public function bootstrap(Application $app)
@@ -31,7 +31,7 @@ class DetectEnvironment
     /**
      * Detect if a custom environment file matching the APP_ENV exists.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @return void
      */
     protected function checkForSpecificEnvironmentFile($app)
@@ -60,7 +60,7 @@ class DetectEnvironment
     /**
      * Load a custom environment file.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @param  string  $file
      * @return void
      */

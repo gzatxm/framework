@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Auth\Passwords\PasswordBroker
+ * @see \Immortal\Auth\Passwords\PasswordBroker
  */
 class Password extends Facade
 {

@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Illuminate\Console\Command;
+use Immortal\Console\Command;
 
 class DummyClass extends Command
 {

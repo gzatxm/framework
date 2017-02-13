@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Foundation\Auth;
+namespace Immortal\Foundation\Auth;
 
 trait RedirectsUsers
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Foundation\Testing;
+namespace Immortal\Foundation\Testing;
 
 use PHPUnit_Framework_ExpectationFailedException;
 

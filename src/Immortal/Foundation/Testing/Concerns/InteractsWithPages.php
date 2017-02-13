@@ -1,23 +1,23 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Concerns;
+namespace Immortal\Foundation\Testing\Concerns;
 
 use Closure;
 use InvalidArgumentException;
-use Illuminate\Http\UploadedFile;
+use Immortal\Http\UploadedFile;
 use Symfony\Component\DomCrawler\Form;
 use Symfony\Component\DomCrawler\Crawler;
-use Illuminate\Foundation\Testing\HttpException;
-use Illuminate\Foundation\Testing\Constraints\HasLink;
-use Illuminate\Foundation\Testing\Constraints\HasText;
-use Illuminate\Foundation\Testing\Constraints\HasValue;
-use Illuminate\Foundation\Testing\Constraints\HasSource;
-use Illuminate\Foundation\Testing\Constraints\IsChecked;
-use Illuminate\Foundation\Testing\Constraints\HasElement;
-use Illuminate\Foundation\Testing\Constraints\IsSelected;
-use Illuminate\Foundation\Testing\Constraints\HasInElement;
-use Illuminate\Foundation\Testing\Constraints\PageConstraint;
-use Illuminate\Foundation\Testing\Constraints\ReversePageConstraint;
+use Immortal\Foundation\Testing\HttpException;
+use Immortal\Foundation\Testing\Constraints\HasLink;
+use Immortal\Foundation\Testing\Constraints\HasText;
+use Immortal\Foundation\Testing\Constraints\HasValue;
+use Immortal\Foundation\Testing\Constraints\HasSource;
+use Immortal\Foundation\Testing\Constraints\IsChecked;
+use Immortal\Foundation\Testing\Constraints\HasElement;
+use Immortal\Foundation\Testing\Constraints\IsSelected;
+use Immortal\Foundation\Testing\Constraints\HasInElement;
+use Immortal\Foundation\Testing\Constraints\PageConstraint;
+use Immortal\Foundation\Testing\Constraints\ReversePageConstraint;
 use PHPUnit_Framework_ExpectationFailedException as PHPUnitException;
 
 trait InteractsWithPages
@@ -205,7 +205,7 @@ trait InteractsWithPages
      * @param  string|null  $message
      * @return $this
      *
-     * @throws \Illuminate\Foundation\Testing\HttpException
+     * @throws \Immortal\Foundation\Testing\HttpException
      */
     protected function assertPageLoaded($uri, $message = null)
     {
@@ -260,7 +260,7 @@ trait InteractsWithPages
     /**
      * Assert the given constraint.
      *
-     * @param  \Illuminate\Foundation\Testing\Constraints\PageConstraint  $constraint
+     * @param  \Immortal\Foundation\Testing\Constraints\PageConstraint  $constraint
      * @param  bool  $reverse
      * @param  string  $message
      * @return $this
@@ -748,7 +748,7 @@ trait InteractsWithPages
      * @param  array  $file
      * @param  array  $uploads
      * @param  string  $name
-     * @return \Illuminate\Http\UploadedFile
+     * @return \Immortal\Http\UploadedFile
      */
     protected function getUploadedFileForTesting($file, $uploads, $name)
     {

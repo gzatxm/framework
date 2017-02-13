@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
-use Illuminate\Support\Testing\Fakes\NotificationFake;
+use Immortal\Support\Testing\Fakes\NotificationFake;
 
 /**
- * @see \Illuminate\Notifications\ChannelManager
+ * @see \Immortal\Notifications\ChannelManager
  */
 class Notification extends Facade
 {
@@ -26,6 +26,6 @@ class Notification extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Notifications\ChannelManager';
+        return 'Immortal\Notifications\ChannelManager';
     }
 }

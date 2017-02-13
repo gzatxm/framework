@@ -1,19 +1,19 @@
 <?php
 
-namespace Illuminate\Foundation\Bootstrap;
+namespace Immortal\Foundation\Bootstrap;
 
-use Illuminate\Config\Repository;
+use Immortal\Config\Repository;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\Config\Repository as RepositoryContract;
+use Immortal\Contracts\Foundation\Application;
+use Immortal\Contracts\Config\Repository as RepositoryContract;
 
 class LoadConfiguration
 {
     /**
      * Bootstrap the given application.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @return void
      */
     public function bootstrap(Application $app)
@@ -50,8 +50,8 @@ class LoadConfiguration
     /**
      * Load the configuration items from all of the files.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
-     * @param  \Illuminate\Contracts\Config\Repository  $repository
+     * @param  \Immortal\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Config\Repository  $repository
      * @return void
      */
     protected function loadConfigurationFiles(Application $app, RepositoryContract $repository)
@@ -64,7 +64,7 @@ class LoadConfiguration
     /**
      * Get all of the configuration files for the application.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Foundation\Application  $app
      * @return array
      */
     protected function getConfigurationFiles(Application $app)

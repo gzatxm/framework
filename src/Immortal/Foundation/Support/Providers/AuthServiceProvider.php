@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Foundation\Support\Providers;
+namespace Immortal\Foundation\Support\Providers;
 
-use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\ServiceProvider;
+use Immortal\Support\Facades\Gate;
+use Immortal\Support\ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {

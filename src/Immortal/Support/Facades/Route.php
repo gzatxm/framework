@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Routing\Router
+ * @see \Immortal\Routing\Router
  */
 class Route extends Facade
 {

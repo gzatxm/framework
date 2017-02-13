@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Illuminate\Bus\Queueable;
+use Immortal\Bus\Queueable;
 
 class DummyClass
 {

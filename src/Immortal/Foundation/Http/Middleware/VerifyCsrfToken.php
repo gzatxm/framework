@@ -1,27 +1,27 @@
 <?php
 
-namespace Illuminate\Foundation\Http\Middleware;
+namespace Immortal\Foundation\Http\Middleware;
 
 use Closure;
 use Carbon\Carbon;
-use Illuminate\Foundation\Application;
+use Immortal\Foundation\Application;
 use Symfony\Component\HttpFoundation\Cookie;
-use Illuminate\Contracts\Encryption\Encrypter;
-use Illuminate\Session\TokenMismatchException;
+use Immortal\Contracts\Encryption\Encrypter;
+use Immortal\Session\TokenMismatchException;
 
 class VerifyCsrfToken
 {
     /**
      * The application instance.
      *
-     * @var \Illuminate\Foundation\Application
+     * @var \Immortal\Foundation\Application
      */
     protected $app;
 
     /**
      * The encrypter implementation.
      *
-     * @var \Illuminate\Contracts\Encryption\Encrypter
+     * @var \Immortal\Contracts\Encryption\Encrypter
      */
     protected $encrypter;
 
@@ -35,8 +35,8 @@ class VerifyCsrfToken
     /**
      * Create a new middleware instance.
      *
-     * @param  \Illuminate\Foundation\Application  $app
-     * @param  \Illuminate\Contracts\Encryption\Encrypter  $encrypter
+     * @param  \Immortal\Foundation\Application  $app
+     * @param  \Immortal\Contracts\Encryption\Encrypter  $encrypter
      * @return void
      */
     public function __construct(Application $app, Encrypter $encrypter)
@@ -48,11 +48,11 @@ class VerifyCsrfToken
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  \Closure  $next
      * @return mixed
      *
-     * @throws \Illuminate\Session\TokenMismatchException
+     * @throws \Immortal\Session\TokenMismatchException
      */
     public function handle($request, Closure $next)
     {
@@ -71,7 +71,7 @@ class VerifyCsrfToken
     /**
      * Determine if the request has a URI that should pass through CSRF verification.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return bool
      */
     protected function shouldPassThrough($request)
@@ -102,7 +102,7 @@ class VerifyCsrfToken
     /**
      * Determine if the session and input CSRF tokens match.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return bool
      */
     protected function tokensMatch($request)
@@ -125,7 +125,7 @@ class VerifyCsrfToken
     /**
      * Add the CSRF token to the response cookies.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  \Symfony\Component\HttpFoundation\Response  $response
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -146,7 +146,7 @@ class VerifyCsrfToken
     /**
      * Determine if the HTTP request uses a 鈥榬ead鈥� verb.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return bool
      */
     protected function isReading($request)

@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Illuminate\Support\ServiceProvider;
+use Immortal\Support\ServiceProvider;
 
 class DummyClass extends ServiceProvider
 {

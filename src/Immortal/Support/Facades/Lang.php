@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Translation\Translator
+ * @see \Immortal\Translation\Translator
  */
 class Lang extends Facade
 {

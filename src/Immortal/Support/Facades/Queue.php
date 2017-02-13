@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
-use Illuminate\Support\Testing\Fakes\QueueFake;
+use Immortal\Support\Testing\Fakes\QueueFake;
 
 /**
- * @see \Illuminate\Queue\QueueManager
- * @see \Illuminate\Queue\Queue
+ * @see \Immortal\Queue\QueueManager
+ * @see \Immortal\Queue\Queue
  */
 class Queue extends Facade
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Foundation\Application
+ * @see \Immortal\Foundation\Application
  */
 class App extends Facade
 {

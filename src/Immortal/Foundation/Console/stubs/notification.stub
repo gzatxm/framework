@@ -2,10 +2,10 @@
 
 namespace DummyNamespace;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
+use Immortal\Bus\Queueable;
+use Immortal\Notifications\Notification;
+use Immortal\Contracts\Queue\ShouldQueue;
+use Immortal\Notifications\Messages\MailMessage;
 
 class DummyClass extends Notification
 {
@@ -36,7 +36,7 @@ class DummyClass extends Notification
      * Get the mail representation of the notification.
      *
      * @param  mixed  $notifiable
-     * @return \Illuminate\Notifications\Messages\MailMessage
+     * @return \Immortal\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
     {

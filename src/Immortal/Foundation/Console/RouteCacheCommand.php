@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
-use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Routing\RouteCollection;
+use Immortal\Console\Command;
+use Immortal\Filesystem\Filesystem;
+use Immortal\Routing\RouteCollection;
 
 class RouteCacheCommand extends Command
 {
@@ -25,14 +25,14 @@ class RouteCacheCommand extends Command
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \Immortal\Filesystem\Filesystem
      */
     protected $files;
 
     /**
      * Create a new route command instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \Immortal\Filesystem\Filesystem  $files
      * @return void
      */
     public function __construct(Filesystem $files)
@@ -71,13 +71,13 @@ class RouteCacheCommand extends Command
     /**
      * Boot a fresh copy of the application and get the routes.
      *
-     * @return \Illuminate\Routing\RouteCollection
+     * @return \Immortal\Routing\RouteCollection
      */
     protected function getFreshApplicationRoutes()
     {
         $app = require $this->laravel->bootstrapPath().'/app.php';
 
-        $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+        $app->make('Immortal\Contracts\Console\Kernel')->bootstrap();
 
         return $app['router']->getRoutes();
     }
@@ -85,7 +85,7 @@ class RouteCacheCommand extends Command
     /**
      * Build the route cache file.
      *
-     * @param  \Illuminate\Routing\RouteCollection  $routes
+     * @param  \Immortal\Routing\RouteCollection  $routes
      * @return string
      */
     protected function buildRouteCacheFile(RouteCollection $routes)

@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Routing\Redirector
+ * @see \Immortal\Routing\Redirector
  */
 class Redirect extends Facade
 {

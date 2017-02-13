@@ -119,7 +119,7 @@ class Container implements ArrayAccess, ContainerContract
      * Define a contextual binding.
      *
      * @param  string  $concrete
-     * @return \Illuminate\Contracts\Container\ContextualBindingBuilder
+     * @return \Immortal\Contracts\Container\ContextualBindingBuilder
      */
     public function when($concrete)
     {
@@ -737,7 +737,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  array   $parameters
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \Immortal\Contracts\Container\BindingResolutionException
      */
     public function build($concrete, array $parameters = [])
     {
@@ -831,7 +831,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  \ReflectionParameter  $parameter
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \Immortal\Contracts\Container\BindingResolutionException
      */
     protected function resolveNonClass(ReflectionParameter $parameter)
     {
@@ -858,7 +858,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  \ReflectionParameter  $parameter
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws \Immortal\Contracts\Container\BindingResolutionException
      */
     protected function resolveClass(ReflectionParameter $parameter)
     {
@@ -1175,7 +1175,7 @@ class Container implements ArrayAccess, ContainerContract
     /**
      * Set the shared instance of the container.
      *
-     * @param  \Illuminate\Contracts\Container\Container|null  $container
+     * @param  \Immortal\Contracts\Container\Container|null  $container
      * @return static
      */
     public static function setInstance(ContainerContract $container = null)

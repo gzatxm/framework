@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Constraints;
+namespace Immortal\Foundation\Testing\Constraints;
 
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\URL;
+use Immortal\Support\Str;
+use Immortal\Support\Facades\URL;
 
 class HasLink extends PageConstraint
 {

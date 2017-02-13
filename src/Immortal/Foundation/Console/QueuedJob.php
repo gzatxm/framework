@@ -1,22 +1,22 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
-use Illuminate\Contracts\Console\Kernel as KernelContract;
+use Immortal\Contracts\Console\Kernel as KernelContract;
 
 class QueuedJob
 {
     /**
      * The kernel instance.
      *
-     * @var \Illuminate\Contracts\Console\Kernel
+     * @var \Immortal\Contracts\Console\Kernel
      */
     protected $kernel;
 
     /**
      * Create a new job instance.
      *
-     * @param  \Illuminate\Contracts\Console\Kernel  $kernel
+     * @param  \Immortal\Contracts\Console\Kernel  $kernel
      * @return void
      */
     public function __construct(KernelContract $kernel)
@@ -27,7 +27,7 @@ class QueuedJob
     /**
      * Fire the job.
      *
-     * @param  \Illuminate\Queue\Jobs\Job  $job
+     * @param  \Immortal\Queue\Jobs\Job  $job
      * @param  array  $data
      * @return void
      */

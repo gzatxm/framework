@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace Immortal\Support\Testing\Fakes;
 
-use Illuminate\Contracts\Queue\Queue;
+use Immortal\Contracts\Queue\Queue;
 use PHPUnit_Framework_Assert as PHPUnit;
 
 class QueueFake implements Queue
@@ -72,7 +72,7 @@ class QueueFake implements Queue
      *
      * @param  string  $job
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \Immortal\Support\Collection
      */
     public function pushed($job, $callback = null)
     {
@@ -104,7 +104,7 @@ class QueueFake implements Queue
      * Resolve a queue connection instance.
      *
      * @param  string  $name
-     * @return \Illuminate\Contracts\Queue\Queue
+     * @return \Immortal\Contracts\Queue\Queue
      */
     public function connection($value = null)
     {
@@ -196,7 +196,7 @@ class QueueFake implements Queue
      * Pop the next job off of the queue.
      *
      * @param  string  $queue
-     * @return \Illuminate\Contracts\Queue\Job|null
+     * @return \Immortal\Contracts\Queue\Job|null
      */
     public function pop($queue = null)
     {

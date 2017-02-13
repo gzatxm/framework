@@ -1,17 +1,17 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
 use Exception;
-use Illuminate\Support\Collection;
-use Illuminate\Foundation\Application;
-use Illuminate\Database\Eloquent\Model;
+use Immortal\Support\Collection;
+use Immortal\Foundation\Application;
+use Immortal\Database\Eloquent\Model;
 use Symfony\Component\VarDumper\Caster\Caster;
 
-class IlluminateCaster
+class ImmortalCaster
 {
     /**
-     * Illuminate application methods to include in the presenter.
+     * Immortal application methods to include in the presenter.
      *
      * @var array
      */
@@ -36,7 +36,7 @@ class IlluminateCaster
     /**
      * Get an array representing the properties of an application.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  \Immortal\Foundation\Application  $app
      * @return array
      */
     public static function castApplication(Application $app)
@@ -61,7 +61,7 @@ class IlluminateCaster
     /**
      * Get an array representing the properties of a collection.
      *
-     * @param  \Illuminate\Support\Collection  $collection
+     * @param  \Immortal\Support\Collection  $collection
      * @return array
      */
     public static function castCollection(Collection $collection)
@@ -74,7 +74,7 @@ class IlluminateCaster
     /**
      * Get an array representing the properties of a model.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \Immortal\Database\Eloquent\Model  $model
      * @return array
      */
     public static function castModel(Model $model)

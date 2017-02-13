@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Foundation\Auth;
+namespace Immortal\Foundation\Auth;
 
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Password;
+use Immortal\Support\Str;
+use Immortal\Http\Request;
+use Immortal\Support\Facades\Auth;
+use Immortal\Support\Facades\Password;
 
 trait ResetsPasswords
 {
@@ -16,9 +16,9 @@ trait ResetsPasswords
      *
      * If no token is present, display the link request form.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  string|null  $token
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return \Immortal\Contracts\View\Factory|\Immortal\View\View
      */
     public function showResetForm(Request $request, $token = null)
     {
@@ -30,8 +30,8 @@ trait ResetsPasswords
     /**
      * Reset the given user's password.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param  \Immortal\Http\Request  $request
+     * @return \Immortal\Http\RedirectResponse
      */
     public function reset(Request $request)
     {
@@ -81,7 +81,7 @@ trait ResetsPasswords
     /**
      * Get the password reset credentials from the request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @return array
      */
     protected function credentials(Request $request)
@@ -94,7 +94,7 @@ trait ResetsPasswords
     /**
      * Reset the given user's password.
      *
-     * @param  \Illuminate\Contracts\Auth\CanResetPassword  $user
+     * @param  \Immortal\Contracts\Auth\CanResetPassword  $user
      * @param  string  $password
      * @return void
      */
@@ -112,7 +112,7 @@ trait ResetsPasswords
      * Get the response for a successful password reset.
      *
      * @param  string  $response
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Immortal\Http\RedirectResponse
      */
     protected function sendResetResponse($response)
     {
@@ -123,9 +123,9 @@ trait ResetsPasswords
     /**
      * Get the response for a failed password reset.
      *
-     * @param  \Illuminate\Http\Request
+     * @param  \Immortal\Http\Request
      * @param  string  $response
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Immortal\Http\RedirectResponse
      */
     protected function sendResetFailedResponse(Request $request, $response)
     {
@@ -137,7 +137,7 @@ trait ResetsPasswords
     /**
      * Get the broker to be used during password reset.
      *
-     * @return \Illuminate\Contracts\Auth\PasswordBroker
+     * @return \Immortal\Contracts\Auth\PasswordBroker
      */
     public function broker()
     {
@@ -147,7 +147,7 @@ trait ResetsPasswords
     /**
      * Get the guard to be used during password reset.
      *
-     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     * @return \Immortal\Contracts\Auth\StatefulGuard
      */
     protected function guard()
     {

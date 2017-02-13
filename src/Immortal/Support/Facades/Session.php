@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Session\SessionManager
- * @see \Illuminate\Session\Store
+ * @see \Immortal\Session\SessionManager
+ * @see \Immortal\Session\Store
  */
 class Session extends Facade
 {

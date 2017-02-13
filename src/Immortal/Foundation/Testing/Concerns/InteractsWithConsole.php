@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Concerns;
+namespace Immortal\Foundation\Testing\Concerns;
 
-use Illuminate\Contracts\Console\Kernel;
+use Immortal\Contracts\Console\Kernel;
 
 trait InteractsWithConsole
 {

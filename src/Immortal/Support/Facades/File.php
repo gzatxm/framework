@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Filesystem\Filesystem
+ * @see \Immortal\Filesystem\Filesystem
  */
 class File extends Facade
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Foundation\Validation;
+namespace Immortal\Foundation\Validation;
 
-use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Routing\UrlGenerator;
-use Illuminate\Contracts\Validation\Factory;
-use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Validation\ValidationException;
+use Immortal\Http\Request;
+use Immortal\Http\JsonResponse;
+use Immortal\Routing\UrlGenerator;
+use Immortal\Contracts\Validation\Factory;
+use Immortal\Contracts\Validation\Validator;
+use Immortal\Validation\ValidationException;
 
 trait ValidatesRequests
 {
@@ -21,8 +21,8 @@ trait ValidatesRequests
     /**
      * Run the validation routine against the given validator.
      *
-     * @param  \Illuminate\Contracts\Validation\Validator|array  $validator
-     * @param  \Illuminate\Http\Request|null  $request
+     * @param  \Immortal\Contracts\Validation\Validator|array  $validator
+     * @param  \Immortal\Http\Request|null  $request
      * @return void
      */
     public function validateWith($validator, Request $request = null)
@@ -41,7 +41,7 @@ trait ValidatesRequests
     /**
      * Validate the given request with the given rules.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  array  $rules
      * @param  array  $messages
      * @param  array  $customAttributes
@@ -60,13 +60,13 @@ trait ValidatesRequests
      * Validate the given request with the given rules.
      *
      * @param  string  $errorBag
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  array  $rules
      * @param  array  $messages
      * @param  array  $customAttributes
      * @return void
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws \Immortal\Validation\ValidationException
      */
     public function validateWithBag($errorBag, Request $request, array $rules, array $messages = [], array $customAttributes = [])
     {
@@ -78,11 +78,11 @@ trait ValidatesRequests
     /**
      * Throw the failed validation exception.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Illuminate\Contracts\Validation\Validator  $validator
+     * @param  \Immortal\Http\Request  $request
+     * @param  \Immortal\Contracts\Validation\Validator  $validator
      * @return void
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws \Immortal\Validation\ValidationException
      */
     protected function throwValidationException(Request $request, $validator)
     {
@@ -94,7 +94,7 @@ trait ValidatesRequests
     /**
      * Create the response for when a request fails validation.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Immortal\Http\Request  $request
      * @param  array  $errors
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -112,7 +112,7 @@ trait ValidatesRequests
     /**
      * Format the validation errors to be returned.
      *
-     * @param  \Illuminate\Contracts\Validation\Validator  $validator
+     * @param  \Immortal\Contracts\Validation\Validator  $validator
      * @return array
      */
     protected function formatValidationErrors(Validator $validator)
@@ -133,7 +133,7 @@ trait ValidatesRequests
     /**
      * Get a validation factory instance.
      *
-     * @return \Illuminate\Contracts\Validation\Factory
+     * @return \Immortal\Contracts\Validation\Factory
      */
     protected function getValidationFactory()
     {

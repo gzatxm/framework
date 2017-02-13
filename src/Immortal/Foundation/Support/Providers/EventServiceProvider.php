@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Foundation\Support\Providers;
+namespace Immortal\Foundation\Support\Providers;
 
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\ServiceProvider;
+use Immortal\Support\Facades\Event;
+use Immortal\Support\ServiceProvider;
 
 class EventServiceProvider extends ServiceProvider
 {

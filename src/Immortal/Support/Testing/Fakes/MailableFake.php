@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace Immortal\Support\Testing\Fakes;
 
-use Illuminate\Mail\Mailable;
-use Illuminate\Mail\MailableMailer;
+use Immortal\Mail\Mailable;
+use Immortal\Mail\MailableMailer;
 
 class MailableFake extends MailableMailer
 {

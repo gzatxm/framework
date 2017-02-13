@@ -3,8 +3,8 @@
 namespace DummyNamespace;
 
 use DummyFullEvent;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use Immortal\Queue\InteractsWithQueue;
+use Immortal\Contracts\Queue\ShouldQueue;
 
 class DummyClass
 {

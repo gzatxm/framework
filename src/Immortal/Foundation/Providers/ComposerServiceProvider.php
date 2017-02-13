@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Foundation\Providers;
+namespace Immortal\Foundation\Providers;
 
-use Illuminate\Support\Composer;
-use Illuminate\Support\ServiceProvider;
+use Immortal\Support\Composer;
+use Immortal\Support\ServiceProvider;
 
 class ComposerServiceProvider extends ServiceProvider
 {

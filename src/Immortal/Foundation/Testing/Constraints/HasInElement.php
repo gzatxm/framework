@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Constraints;
+namespace Immortal\Foundation\Testing\Constraints;
 
 use Symfony\Component\DomCrawler\Crawler;
 

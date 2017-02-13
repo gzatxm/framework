@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Foundation\Testing\Constraints;
+namespace Immortal\Foundation\Testing\Constraints;
 
 class HasSource extends PageConstraint
 {

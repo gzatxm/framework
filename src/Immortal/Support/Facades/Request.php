@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Http\Request
+ * @see \Immortal\Http\Request
  */
 class Request extends Facade
 {

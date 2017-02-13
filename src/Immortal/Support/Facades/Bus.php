@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
-use Illuminate\Support\Testing\Fakes\BusFake;
+use Immortal\Support\Testing\Fakes\BusFake;
 
 /**
- * @see \Illuminate\Contracts\Bus\Dispatcher
+ * @see \Immortal\Contracts\Bus\Dispatcher
  */
 class Bus extends Facade
 {
@@ -26,6 +26,6 @@ class Bus extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Contracts\Bus\Dispatcher';
+        return 'Immortal\Contracts\Bus\Dispatcher';
     }
 }

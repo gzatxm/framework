@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Contracts\Routing\ResponseFactory
+ * @see \Immortal\Contracts\Routing\ResponseFactory
  */
 class Response extends Facade
 {
@@ -14,6 +14,6 @@ class Response extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Contracts\Routing\ResponseFactory';
+        return 'Immortal\Contracts\Routing\ResponseFactory';
     }
 }

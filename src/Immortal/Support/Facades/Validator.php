@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Validation\Factory
+ * @see \Immortal\Validation\Factory
  */
 class Validator extends Facade
 {

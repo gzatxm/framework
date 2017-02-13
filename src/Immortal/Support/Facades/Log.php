@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
 /**
- * @see \Illuminate\Log\Writer
+ * @see \Immortal\Log\Writer
  */
 class Log extends Facade
 {

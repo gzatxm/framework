@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation\Console;
+namespace Immortal\Foundation\Console;
 
-use Illuminate\Console\Command;
+use Immortal\Console\Command;
 
 class KeyGenerateCommand extends Command
 {

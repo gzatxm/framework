@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace Immortal\Support\Facades;
 
-use Illuminate\Support\Testing\Fakes\EventFake;
+use Immortal\Support\Testing\Fakes\EventFake;
 
 /**
- * @see \Illuminate\Events\Dispatcher
+ * @see \Immortal\Events\Dispatcher
  */
 class Event extends Facade
 {

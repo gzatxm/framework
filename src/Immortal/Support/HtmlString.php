@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Immortal\Support;
 
-use Illuminate\Contracts\Support\Htmlable;
+use Immortal\Contracts\Support\Htmlable;
 
 class HtmlString implements Htmlable
 {

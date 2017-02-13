@@ -1,16 +1,16 @@
 <?php
 
-namespace Illuminate\Foundation\Auth;
+namespace Immortal\Foundation\Auth;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Password;
+use Immortal\Http\Request;
+use Immortal\Support\Facades\Password;
 
 trait SendsPasswordResetEmails
 {
     /**
      * Display the form to request a password reset link.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Immortal\Http\Response
      */
     public function showLinkRequestForm()
     {
@@ -20,8 +20,8 @@ trait SendsPasswordResetEmails
     /**
      * Send a reset link to the given user.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param  \Immortal\Http\Request  $request
+     * @return \Immortal\Http\RedirectResponse
      */
     public function sendResetLinkEmail(Request $request)
     {
@@ -43,7 +43,7 @@ trait SendsPasswordResetEmails
      * Get the response for a successful password reset link.
      *
      * @param  string  $response
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Immortal\Http\RedirectResponse
      */
     protected function sendResetLinkResponse($response)
     {
@@ -53,9 +53,9 @@ trait SendsPasswordResetEmails
     /**
      * Get the response for a failed password reset link.
      *
-     * @param  \Illuminate\Http\Request
+     * @param  \Immortal\Http\Request
      * @param  string  $response
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Immortal\Http\RedirectResponse
      */
     protected function sendResetLinkFailedResponse(Request $request, $response)
     {
@@ -67,7 +67,7 @@ trait SendsPasswordResetEmails
     /**
      * Get the broker to be used during password reset.
      *
-     * @return \Illuminate\Contracts\Auth\PasswordBroker
+     * @return \Immortal\Contracts\Auth\PasswordBroker
      */
     public function broker()
     {

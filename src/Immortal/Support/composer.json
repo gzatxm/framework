@@ -1,6 +1,6 @@
 {
     "name": "illuminate/support",
-    "description": "The Illuminate Support package.",
+    "description": "The Immortal Support package.",
     "license": "MIT",
     "homepage": "https://laravel.com",
     "support": {
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Illuminate\\Support\\": ""
+            "Immortal\\Support\\": ""
         },
         "files": [
             "helpers.php"
