@@ -1,0 +1,68 @@
+{
+    "name": "gutu/framework",
+    "description": "The Gutu Framework.",
+    "keywords": ["framework", "gutu"],
+    "license": "MIT",
+    /*"homepage": "https://laravel.com",
+    "support": {
+        "issues": "https://github.com/laravel/framework/issues",
+        "source": "https://github.com/laravel/framework"
+    },*/
+    "authors": [
+        {
+            "name": "Tu Xiaomu",
+            "email": "zatxm120@laravel.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "classpreloader/classpreloader": "~3.0",
+        "doctrine/inflector": "~1.0",
+        "jeremeamia/superclosure": "~2.2",
+        "league/flysystem": "~1.0",
+        "monolog/monolog": "~1.11",
+        "mtdowling/cron-expression": "~1.0",
+        "nesbot/carbon": "~1.20",
+        "paragonie/random_compat": "~1.4|~2.0",
+        "psy/psysh": "0.7.*|0.8.*",
+        "ramsey/uuid": "~3.0",
+        "swiftmailer/swiftmailer": "~5.4",
+        "symfony/console": "3.1.*",
+        "symfony/debug": "3.1.*",
+        "symfony/finder": "3.1.*",
+        "symfony/http-foundation": "3.1.*",
+        "symfony/http-kernel": "3.1.*",
+        "symfony/process": "3.1.*",
+        "symfony/routing": "3.1.*",
+        "symfony/translation": "3.1.*",
+        "symfony/var-dumper": "3.1.*",
+        "vlucas/phpdotenv": "~2.2"
+    },
+    "require-dev": {
+        "aws/aws-sdk-php": "~3.0",
+        "mockery/mockery": "~0.9.4",
+        "pda/pheanstalk": "~3.0",
+        "phpunit/phpunit": "~5.4",
+        "predis/predis": "~1.0"
+    },
+    "autoload": {
+        "files": [
+            "src/Immortal/Foundation/helpers.php",
+            "src/Immortal/Support/helpers.php"
+        ],
+        "psr-4": {
+            "Immortal\\": "src/Immortal/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
