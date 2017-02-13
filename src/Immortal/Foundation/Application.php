@@ -14,7 +14,7 @@ use Immortal\Container\Container;
 use Immortal\Support\ServiceProvider;
 use Immortal\Events\EventServiceProvider;
 use Immortal\Routing\RoutingServiceProvider;
-use Immortal\Contract\Foundation\Application as ApplicationContract;
+use Immortal\Contracts\Foundation\Application as ApplicationContract;
 
 class Application extends Container implements ApplicationContract
 {

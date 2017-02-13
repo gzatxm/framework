@@ -4,7 +4,7 @@
  */
 namespace Immortal\Container;
 
-use Immortal\Contract\Container\ContextualBindingBuilder as ContextualBindingBuilderContract;
+use Immortal\Contracts\Container\ContextualBindingBuilder as ContextualBindingBuilderContract;
 
 class ContextualBindingBuilder implements ContextualBindingBuilderContract
 {

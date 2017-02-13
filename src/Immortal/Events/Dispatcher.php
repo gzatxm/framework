@@ -8,10 +8,10 @@ use Exception;
 use ReflectionClass;
 use Immortal\Support\Str;
 use Immortal\Container\Container;
-use Immortal\Contract\Broadcasting\ShouldBroadcast;
-use Immortal\Contract\Events\Dispatcher as DispatcherContract;
-use Immortal\Contract\Broadcasting\Factory as BroadcastFactory;
-use Immortal\Contract\Container\Container as ContainerContract;
+use Immortal\Contracts\Broadcasting\ShouldBroadcast;
+use Immortal\Contracts\Events\Dispatcher as DispatcherContract;
+use Immortal\Contracts\Broadcasting\Factory as BroadcastFactory;
+use Immortal\Contracts\Container\Container as ContainerContract;
 
 class Dispatcher implements DispatcherContract
 {

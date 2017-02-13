@@ -12,8 +12,8 @@ use ReflectionMethod;
 use ReflectionFunction;
 use ReflectionParameter;
 use InvalidArgumentException;
-use Immortal\Contract\Container\BindingResolutionException;
-use Immortal\Contract\Container\Container as ContainerContract;
+use Immortal\Contracts\Container\BindingResolutionException;
+use Immortal\Contracts\Container\Container as ContainerContract;
 
 class Container implements ArrayAccess, ContainerContract
 {
