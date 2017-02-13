@@ -30,7 +30,7 @@ class DownCommand extends Command
     public function fire()
     {
         file_put_contents(
-            $this->laravel->storagePath().'/framework/down',
+            $this->zgutu->storagePath().'/framework/down',
             json_encode($this->getDownFilePayload(), JSON_PRETTY_PRINT)
         );
 

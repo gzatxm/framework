@@ -54,7 +54,7 @@ class ClearCommand extends Command
 
         $cache = $this->cache->store($store = $this->argument('store'));
 
-        $this->laravel['events']->fire('cache:clearing', [$store, $tags]);
+        $this->zgutu['events']->fire('cache:clearing', [$store, $tags]);
 
         if (! empty($tags)) {
             $cache->tags($tags)->flush();
@@ -64,7 +64,7 @@ class ClearCommand extends Command
 
         $this->info('Cache cleared successfully.');
 
-        $this->laravel['events']->fire('cache:cleared', [$store, $tags]);
+        $this->zgutu['events']->fire('cache:cleared', [$store, $tags]);
     }
 
     /**

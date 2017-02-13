@@ -157,7 +157,7 @@ class Handler implements ExceptionHandlerContract
     }
 
     /**
-     * Map exception into an illuminate response.
+     * Map exception into an immortal response.
      *
      * @param  \Symfony\Component\HttpFoundation\Response  $response
      * @param  \Exception  $e

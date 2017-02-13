@@ -58,7 +58,7 @@ class PolicyMakeCommand extends GeneratorCommand
         if (Str::startsWith($model, '\\')) {
             $stub = str_replace('NamespacedDummyModel', trim($model, '\\'), $stub);
         } else {
-            $stub = str_replace('NamespacedDummyModel', $this->laravel->getNamespace().$model, $stub);
+            $stub = str_replace('NamespacedDummyModel', $this->zgutu->getNamespace().$model, $stub);
         }
 
         $model = class_basename(trim($model, '\\'));

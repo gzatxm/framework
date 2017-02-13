@@ -1,7 +1,5 @@
 <?php
-/**
- * 宏
- */
+
 namespace Immortal\Support\Traits;
 
 use Closure;

@@ -57,7 +57,7 @@ class FailedTableCommand extends Command
      */
     public function fire()
     {
-        $table = $this->laravel['config']['queue.failed.table'];
+        $table = $this->zgutu['config']['queue.failed.table'];
 
         $tableClassName = Str::studly($table);
 
@@ -84,8 +84,8 @@ class FailedTableCommand extends Command
     {
         $name = 'create_'.$table.'_table';
 
-        $path = $this->laravel->databasePath().'/migrations';
+        $path = $this->zgutu->databasePath().'/migrations';
 
-        return $this->laravel['migration.creator']->create($name, $path);
+        return $this->zgutu['migration.creator']->create($name, $path);
     }
 }

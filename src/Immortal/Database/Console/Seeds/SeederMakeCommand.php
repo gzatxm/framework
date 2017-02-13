@@ -80,7 +80,7 @@ class SeederMakeCommand extends GeneratorCommand
      */
     protected function getPath($name)
     {
-        return $this->laravel->databasePath().'/seeds/'.$name.'.php';
+        return $this->zgutu->databasePath().'/seeds/'.$name.'.php';
     }
 
     /**

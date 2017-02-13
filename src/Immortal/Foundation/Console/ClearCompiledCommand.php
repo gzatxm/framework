@@ -27,8 +27,8 @@ class ClearCompiledCommand extends Command
      */
     public function fire()
     {
-        $compiledPath = $this->laravel->getCachedCompilePath();
-        $servicesPath = $this->laravel->getCachedServicesPath();
+        $compiledPath = $this->zgutu->getCachedCompilePath();
+        $servicesPath = $this->zgutu->getCachedServicesPath();
 
         if (file_exists($compiledPath)) {
             @unlink($compiledPath);

@@ -16,11 +16,11 @@ use Symfony\Component\Console\Command\Command as SymfonyCommand;
 class Command extends SymfonyCommand
 {
     /**
-     * The Laravel application instance.
+     * The Zgutu application instance.
      *
      * @var \Immortal\Contracts\Foundation\Application
      */
-    protected $laravel;
+    protected $zgutu;
 
     /**
      * The input interface implementation.
@@ -166,7 +166,7 @@ class Command extends SymfonyCommand
     {
         $method = method_exists($this, 'handle') ? 'handle' : 'fire';
 
-        return $this->laravel->call([$this, $method]);
+        return $this->zgutu->call([$this, $method]);
     }
 
     /**
@@ -521,23 +521,23 @@ class Command extends SymfonyCommand
     }
 
     /**
-     * Get the Laravel application instance.
+     * Get the Zgutu application instance.
      *
      * @return \Immortal\Contracts\Foundation\Application
      */
-    public function getLaravel()
+    public function getZgutu()
     {
-        return $this->laravel;
+        return $this->zgutu;
     }
 
     /**
-     * Set the Laravel application instance.
+     * Set the Zgutu application instance.
      *
-     * @param  \Immortal\Contracts\Container\Container  $laravel
+     * @param  \Immortal\Contracts\Container\Container  $zgutu
      * @return void
      */
-    public function setLaravel($laravel)
+    public function setZgutu($zgutu)
     {
-        $this->laravel = $laravel;
+        $this->zgutu = $zgutu;
     }
 }

@@ -49,14 +49,14 @@ class ScheduleRunCommand extends Command
     {
         $eventsRan = false;
 
-        foreach ($this->schedule->dueEvents($this->laravel) as $event) {
-            if (! $event->filtersPass($this->laravel)) {
+        foreach ($this->schedule->dueEvents($this->zgutu) as $event) {
+            if (! $event->filtersPass($this->zgutu)) {
                 continue;
             }
 
             $this->line('<info>Running scheduled command:</info> '.$event->getSummaryForDisplay());
 
-            $event->run($this->laravel);
+            $event->run($this->zgutu);
 
             $eventsRan = true;
         }

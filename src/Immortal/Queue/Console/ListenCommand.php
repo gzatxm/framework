@@ -82,10 +82,10 @@ class ListenCommand extends Command
     protected function getQueue($connection)
     {
         if (is_null($connection)) {
-            $connection = $this->laravel['config']['queue.default'];
+            $connection = $this->zgutu['config']['queue.default'];
         }
 
-        $queue = $this->laravel['config']->get("queue.connections.{$connection}.queue", 'default');
+        $queue = $this->zgutu['config']->get("queue.connections.{$connection}.queue", 'default');
 
         return $this->input->getOption('queue') ?: $queue;
     }
@@ -97,7 +97,7 @@ class ListenCommand extends Command
      */
     protected function setListenerOptions()
     {
-        $this->listener->setEnvironment($this->laravel->environment());
+        $this->listener->setEnvironment($this->zgutu->environment());
 
         $this->listener->setSleep($this->option('sleep'));
 

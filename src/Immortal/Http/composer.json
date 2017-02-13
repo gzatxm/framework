@@ -1,22 +1,22 @@
 {
-    "name": "illuminate/http",
+    "name": "immortal/http",
     "description": "The Immortal Http package.",
     "license": "MIT",
-    "homepage": "https://laravel.com",
+    "homepage": "https://zgutu.com",
     "support": {
-        "issues": "https://github.com/laravel/framework/issues",
-        "source": "https://github.com/laravel/framework"
+        "issues": "https://github.com/zgutu/framework/issues",
+        "source": "https://github.com/zgutu/framework"
     },
     "authors": [
         {
             "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
+            "email": "taylor@zgutu.com"
         }
     ],
     "require": {
         "php": ">=5.6.4",
-        "illuminate/session": "5.3.*",
-        "illuminate/support": "5.3.*",
+        "immortal/session": "5.3.*",
+        "immortal/support": "5.3.*",
         "symfony/http-foundation": "3.1.*",
         "symfony/http-kernel": "3.1.*"
     },

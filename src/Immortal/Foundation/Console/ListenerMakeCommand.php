@@ -55,8 +55,8 @@ class ListenerMakeCommand extends GeneratorCommand
 
         $event = $this->option('event');
 
-        if (! Str::startsWith($event, $this->laravel->getNamespace()) && ! Str::startsWith($event, 'Immortal')) {
-            $event = $this->laravel->getNamespace().'Events\\'.$event;
+        if (! Str::startsWith($event, $this->zgutu->getNamespace()) && ! Str::startsWith($event, 'Immortal')) {
+            $event = $this->zgutu->getNamespace().'Events\\'.$event;
         }
 
         $stub = str_replace(

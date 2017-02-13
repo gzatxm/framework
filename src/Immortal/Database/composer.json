@@ -1,24 +1,24 @@
 {
-    "name": "illuminate/database",
+    "name": "immortal/database",
     "description": "The Immortal Database package.",
     "license": "MIT",
-    "homepage": "https://laravel.com",
+    "homepage": "https://zgutu.com",
     "support": {
-        "issues": "https://github.com/laravel/framework/issues",
-        "source": "https://github.com/laravel/framework"
+        "issues": "https://github.com/zgutu/framework/issues",
+        "source": "https://github.com/zgutu/framework"
     },
-    "keywords": ["laravel", "database", "sql", "orm"],
+    "keywords": ["zgutu", "database", "sql", "orm"],
     "authors": [
         {
             "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
+            "email": "taylor@zgutu.com"
         }
     ],
     "require": {
         "php": ">=5.6.4",
-        "illuminate/container": "5.3.*",
-        "illuminate/contracts": "5.3.*",
-        "illuminate/support": "5.3.*",
+        "immortal/container": "5.3.*",
+        "immortal/contracts": "5.3.*",
+        "immortal/support": "5.3.*",
         "nesbot/carbon": "~1.20"
     },
     "autoload": {
@@ -34,10 +34,10 @@
     "suggest": {
         "doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.4).",
         "fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
-        "illuminate/console": "Required to use the database commands (5.3.*).",
-        "illuminate/events": "Required to use the observers with Eloquent (5.3.*).",
-        "illuminate/filesystem": "Required to use the migrations (5.3.*).",
-        "illuminate/pagination": "Required to paginate the result set (5.3.*)."
+        "immortal/console": "Required to use the database commands (5.3.*).",
+        "immortal/events": "Required to use the observers with Eloquent (5.3.*).",
+        "immortal/filesystem": "Required to use the migrations (5.3.*).",
+        "immortal/pagination": "Required to paginate the result set (5.3.*)."
     },
     "config": {
         "sort-packages": true

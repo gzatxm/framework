@@ -32,7 +32,7 @@ class RetryCommand extends Command
         $ids = $this->argument('id');
 
         if (count($ids) === 1 && $ids[0] === 'all') {
-            $ids = Arr::pluck($this->laravel['queue.failer']->all(), 'id');
+            $ids = Arr::pluck($this->zgutu['queue.failer']->all(), 'id');
         }
 
         foreach ($ids as $id) {
@@ -48,17 +48,17 @@ class RetryCommand extends Command
      */
     protected function retryJob($id)
     {
-        $failed = $this->laravel['queue.failer']->find($id);
+        $failed = $this->zgutu['queue.failer']->find($id);
 
         if (! is_null($failed)) {
             $failed = (object) $failed;
 
             $failed->payload = $this->resetAttempts($failed->payload);
 
-            $this->laravel['queue']->connection($failed->connection)
+            $this->zgutu['queue']->connection($failed->connection)
                                 ->pushRaw($failed->payload, $failed->queue);
 
-            $this->laravel['queue.failer']->forget($failed->id);
+            $this->zgutu['queue.failer']->forget($failed->id);
 
             $this->info("The failed job [{$id}] has been pushed back onto the queue!");
         } else {

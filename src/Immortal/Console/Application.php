@@ -15,11 +15,11 @@ use Immortal\Contracts\Console\Application as ApplicationContract;
 class Application extends SymfonyApplication implements ApplicationContract
 {
     /**
-     * The Laravel application instance.
+     * The Zgutu application instance.
      *
      * @var \Immortal\Contracts\Container\Container
      */
-    protected $laravel;
+    protected $zgutu;
 
     /**
      * The output from the previous command.
@@ -38,16 +38,16 @@ class Application extends SymfonyApplication implements ApplicationContract
     /**
      * Create a new Artisan console application.
      *
-     * @param  \Immortal\Contracts\Container\Container  $laravel
+     * @param  \Immortal\Contracts\Container\Container  $zgutu
      * @param  \Immortal\Contracts\Events\Dispatcher  $events
      * @param  string  $version
      * @return void
      */
-    public function __construct(Container $laravel, Dispatcher $events, $version)
+    public function __construct(Container $zgutu, Dispatcher $events, $version)
     {
-        parent::__construct('Laravel Framework', $version);
+        parent::__construct('Zgutu Framework', $version);
 
-        $this->laravel = $laravel;
+        $this->zgutu = $zgutu;
         $this->setAutoExit(false);
         $this->setCatchExceptions(false);
 
@@ -130,7 +130,7 @@ class Application extends SymfonyApplication implements ApplicationContract
     public function add(SymfonyCommand $command)
     {
         if ($command instanceof Command) {
-            $command->setLaravel($this->laravel);
+            $command->setZgutu($this->zgutu);
         }
 
         return $this->addToParent($command);
@@ -155,7 +155,7 @@ class Application extends SymfonyApplication implements ApplicationContract
      */
     public function resolve($command)
     {
-        return $this->add($this->laravel->make($command));
+        return $this->add($this->zgutu->make($command));
     }
 
     /**
@@ -204,12 +204,12 @@ class Application extends SymfonyApplication implements ApplicationContract
     }
 
     /**
-     * Get the Laravel application instance.
+     * Get the Zgutu application instance.
      *
      * @return \Immortal\Contracts\Foundation\Application
      */
-    public function getLaravel()
+    public function getZgutu()
     {
-        return $this->laravel;
+        return $this->zgutu;
     }
 }

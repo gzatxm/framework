@@ -87,9 +87,9 @@ abstract class GeneratorCommand extends Command
      */
     protected function getPath($name)
     {
-        $name = str_replace_first($this->laravel->getNamespace(), '', $name);
+        $name = str_replace_first($this->zgutu->getNamespace(), '', $name);
 
-        return $this->laravel['path'].'/'.str_replace('\\', '/', $name).'.php';
+        return $this->zgutu['path'].'/'.str_replace('\\', '/', $name).'.php';
     }
 
     /**
@@ -100,7 +100,7 @@ abstract class GeneratorCommand extends Command
      */
     protected function parseName($name)
     {
-        $rootNamespace = $this->laravel->getNamespace();
+        $rootNamespace = $this->zgutu->getNamespace();
 
         if (Str::startsWith($name, $rootNamespace)) {
             return $name;
@@ -164,7 +164,7 @@ abstract class GeneratorCommand extends Command
         );
 
         $stub = str_replace(
-            'DummyRootNamespace', $this->laravel->getNamespace(), $stub
+            'DummyRootNamespace', $this->zgutu->getNamespace(), $stub
         );
 
         return $this;

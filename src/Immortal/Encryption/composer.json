@@ -1,24 +1,24 @@
 {
-    "name": "illuminate/encryption",
+    "name": "immortal/encryption",
     "description": "The Immortal Encryption package.",
     "license": "MIT",
-    "homepage": "https://laravel.com",
+    "homepage": "https://zgutu.com",
     "support": {
-        "issues": "https://github.com/laravel/framework/issues",
-        "source": "https://github.com/laravel/framework"
+        "issues": "https://github.com/zgutu/framework/issues",
+        "source": "https://github.com/zgutu/framework"
     },
     "authors": [
         {
             "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
+            "email": "taylor@zgutu.com"
         }
     ],
     "require": {
         "php": ">=5.6.4",
         "ext-mbstring": "*",
         "ext-openssl": "*",
-        "illuminate/contracts": "5.3.*",
-        "illuminate/support": "5.3.*",
+        "immortal/contracts": "5.3.*",
+        "immortal/support": "5.3.*",
         "paragonie/random_compat": "~1.4|~2.0"
     },
     "autoload": {

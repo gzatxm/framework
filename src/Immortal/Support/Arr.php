@@ -1,7 +1,5 @@
 <?php
-/**
- * 数组操作
- */
+
 namespace Immortal\Support;
 
 use ArrayAccess;

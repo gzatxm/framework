@@ -73,7 +73,7 @@ class TinkerCommand extends Command
     }
 
     /**
-     * Get an array of Laravel tailored casters.
+     * Get an array of Zgutu tailored casters.
      *
      * @return array
      */

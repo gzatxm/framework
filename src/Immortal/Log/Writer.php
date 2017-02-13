@@ -240,7 +240,7 @@ class Writer implements LogContract, PsrLoggerInterface
      * @param  string  $level
      * @return \Psr\Log\LoggerInterface
      */
-    public function useSyslog($name = 'laravel', $level = 'debug')
+    public function useSyslog($name = 'zgutu', $level = 'debug')
     {
         return $this->monolog->pushHandler(new SyslogHandler($name, LOG_USER, $level));
     }
@@ -275,7 +275,7 @@ class Writer implements LogContract, PsrLoggerInterface
             throw new RuntimeException('Events dispatcher has not been set.');
         }
 
-        $this->dispatcher->listen('illuminate.log', $callback);
+        $this->dispatcher->listen('immortal.log', $callback);
     }
 
     /**
@@ -292,7 +292,7 @@ class Writer implements LogContract, PsrLoggerInterface
         // log listeners. These are useful for building profilers or other tools
         // that aggregate all of the log messages for a given "request" cycle.
         if (isset($this->dispatcher)) {
-            $this->dispatcher->fire('illuminate.log', compact('level', 'message', 'context'));
+            $this->dispatcher->fire('immortal.log', compact('level', 'message', 'context'));
         }
     }
 

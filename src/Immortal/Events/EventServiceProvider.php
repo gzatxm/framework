@@ -1,7 +1,5 @@
 <?php
-/**
- * 事件服务提供者
- */
+
 namespace Immortal\Events;
 
 use Immortal\Support\ServiceProvider;
@@ -9,7 +7,8 @@ use Immortal\Support\ServiceProvider;
 class EventServiceProvider extends ServiceProvider
 {
     /**
-     * 注册服务
+     * Register the service provider.
+     *
      * @return void
      */
     public function register()

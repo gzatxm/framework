@@ -82,7 +82,7 @@ class QueueManager implements FactoryContract, MonitorContract
      */
     public function looping($callback)
     {
-        $this->app['events']->listen('illuminate.queue.looping', $callback);
+        $this->app['events']->listen('immortal.queue.looping', $callback);
     }
 
     /**

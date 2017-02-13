@@ -32,17 +32,17 @@ class ServeCommand extends Command
      */
     public function fire()
     {
-        chdir($this->laravel->publicPath());
+        chdir($this->zgutu->publicPath());
 
         $host = $this->input->getOption('host');
 
         $port = $this->input->getOption('port');
 
-        $base = ProcessUtils::escapeArgument($this->laravel->basePath());
+        $base = ProcessUtils::escapeArgument($this->zgutu->basePath());
 
         $binary = ProcessUtils::escapeArgument((new PhpExecutableFinder)->find(false));
 
-        $this->info("Laravel development server started on http://{$host}:{$port}/");
+        $this->info("Zgutu development server started on http://{$host}:{$port}/");
 
         passthru("{$binary} -S {$host}:{$port} {$base}/server.php");
     }

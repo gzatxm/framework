@@ -436,7 +436,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
-     * Convert the given array of Symfony UploadedFiles to custom Laravel UploadedFiles.
+     * Convert the given array of Symfony UploadedFiles to custom Zgutu UploadedFiles.
      *
      * @param  array  $files
      * @return array

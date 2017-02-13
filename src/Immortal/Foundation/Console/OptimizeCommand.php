@@ -59,7 +59,7 @@ class OptimizeCommand extends Command
             $this->composer->dumpOptimized();
         }
 
-        if ($this->option('force') || ! $this->laravel['config']['app.debug']) {
+        if ($this->option('force') || ! $this->zgutu['config']['app.debug']) {
             $this->info('Compiling common classes');
             $this->compileClasses();
         } else {
@@ -76,7 +76,7 @@ class OptimizeCommand extends Command
     {
         $preloader = (new Factory)->create(['skip' => true]);
 
-        $handle = $preloader->prepareOutput($this->laravel->getCachedCompilePath());
+        $handle = $preloader->prepareOutput($this->zgutu->getCachedCompilePath());
 
         foreach ($this->getClassFiles() as $file) {
             try {
@@ -96,7 +96,7 @@ class OptimizeCommand extends Command
      */
     protected function getClassFiles()
     {
-        $app = $this->laravel;
+        $app = $this->zgutu;
 
         $core = require __DIR__.'/Optimize/config.php';
 

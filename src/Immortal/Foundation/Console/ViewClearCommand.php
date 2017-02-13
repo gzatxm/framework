@@ -49,7 +49,7 @@ class ViewClearCommand extends Command
      */
     public function fire()
     {
-        $path = $this->laravel['config']['view.compiled'];
+        $path = $this->zgutu['config']['view.compiled'];
 
         if (! $path) {
             throw new RuntimeException('View path not found.');

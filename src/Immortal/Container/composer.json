@@ -1,15 +1,21 @@
 {
     "name": "immortal/container",
-    "description": "The immortal Container package.",
+    "description": "The Immortal Container package.",
     "license": "MIT",
+    "homepage": "https://zgutu.com",
+    "support": {
+        "issues": "https://github.com/zgutu/framework/issues",
+        "source": "https://github.com/zgutu/framework"
+    },
     "authors": [
         {
-            "name": "Tu Xiaomu",
-            "email": "zatxm120@163.com"
+            "name": "Taylor Otwell",
+            "email": "taylor@zgutu.com"
         }
     ],
     "require": {
-        "php": ">=5.6.4"
+        "php": ">=5.6.4",
+        "immortal/contracts": "5.3.*"
     },
     "autoload": {
         "psr-4": {

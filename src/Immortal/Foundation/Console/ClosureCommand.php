@@ -51,7 +51,7 @@ class ClosureCommand extends Command
             }
         }
 
-        return $this->laravel->call(
+        return $this->zgutu->call(
             $this->callback->bindTo($this, $this), $parameters
         );
     }

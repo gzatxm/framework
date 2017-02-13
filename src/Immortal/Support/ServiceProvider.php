@@ -1,7 +1,5 @@
 <?php
-/**
- * 服务提供者抽象
- */
+
 namespace Immortal\Support;
 
 use Immortal\Console\Application as Artisan;

@@ -1,7 +1,5 @@
 <?php
-/**
- * 上下文绑定构建器
- */
+
 namespace Immortal\Container;
 
 use Immortal\Contracts\Container\ContextualBindingBuilder as ContextualBindingBuilderContract;

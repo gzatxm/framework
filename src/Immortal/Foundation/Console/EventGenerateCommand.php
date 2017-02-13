@@ -28,7 +28,7 @@ class EventGenerateCommand extends Command
      */
     public function fire()
     {
-        $provider = $this->laravel->getProvider(
+        $provider = $this->zgutu->getProvider(
             'Immortal\Foundation\Support\Providers\EventServiceProvider'
         );
 

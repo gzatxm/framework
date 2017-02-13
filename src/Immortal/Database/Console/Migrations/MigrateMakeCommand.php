@@ -108,7 +108,7 @@ class MigrateMakeCommand extends BaseCommand
     protected function getMigrationPath()
     {
         if (! is_null($targetPath = $this->input->getOption('path'))) {
-            return $this->laravel->basePath().'/'.$targetPath;
+            return $this->zgutu->basePath().'/'.$targetPath;
         }
 
         return parent::getMigrationPath();

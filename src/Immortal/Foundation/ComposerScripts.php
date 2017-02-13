@@ -33,19 +33,19 @@ class ComposerScripts
     }
 
     /**
-     * Clear the cached Laravel bootstrapping files.
+     * Clear the cached Zgutu bootstrapping files.
      *
      * @return void
      */
     protected static function clearCompiled()
     {
-        $laravel = new Application(getcwd());
+        $zgutu = new Application(getcwd());
 
-        if (file_exists($compiledPath = $laravel->getCachedCompilePath())) {
+        if (file_exists($compiledPath = $zgutu->getCachedCompilePath())) {
             @unlink($compiledPath);
         }
 
-        if (file_exists($servicesPath = $laravel->getCachedServicesPath())) {
+        if (file_exists($servicesPath = $zgutu->getCachedServicesPath())) {
             @unlink($servicesPath);
         }
     }

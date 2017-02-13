@@ -1,7 +1,5 @@
 <?php
-/**
- * 字符串相关操作
- */
+
 namespace Immortal\Support;
 
 use Immortal\Support\Traits\Macroable;

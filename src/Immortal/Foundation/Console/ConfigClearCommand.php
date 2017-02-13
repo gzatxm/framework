@@ -48,7 +48,7 @@ class ConfigClearCommand extends Command
      */
     public function fire()
     {
-        $this->files->delete($this->laravel->getCachedConfigPath());
+        $this->files->delete($this->zgutu->getCachedConfigPath());
 
         $this->info('Configuration cache cleared!');
     }

@@ -1,7 +1,5 @@
 <?php
-/**
- * 事件转发器
- */
+
 namespace Immortal\Events;
 
 use Exception;

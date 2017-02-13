@@ -1,22 +1,22 @@
 {
-    "name": "illuminate/cache",
+    "name": "immortal/cache",
     "description": "The Immortal Cache package.",
     "license": "MIT",
-    "homepage": "https://laravel.com",
+    "homepage": "https://zgutu.com",
     "support": {
-        "issues": "https://github.com/laravel/framework/issues",
-        "source": "https://github.com/laravel/framework"
+        "issues": "https://github.com/zgutu/framework/issues",
+        "source": "https://github.com/zgutu/framework"
     },
     "authors": [
         {
             "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
+            "email": "taylor@zgutu.com"
         }
     ],
     "require": {
         "php": ">=5.6.4",
-        "illuminate/contracts": "5.3.*",
-        "illuminate/support": "5.3.*",
+        "immortal/contracts": "5.3.*",
+        "immortal/support": "5.3.*",
         "nesbot/carbon": "~1.20"
     },
     "autoload": {
@@ -30,9 +30,9 @@
         }
     },
     "suggest": {
-        "illuminate/database": "Required to use the database cache driver (5.3.*).",
-        "illuminate/filesystem": "Required to use the file cache driver (5.3.*).",
-        "illuminate/redis": "Required to use the redis cache driver (5.3.*)."
+        "immortal/database": "Required to use the database cache driver (5.3.*).",
+        "immortal/filesystem": "Required to use the file cache driver (5.3.*).",
+        "immortal/redis": "Required to use the redis cache driver (5.3.*)."
     },
     "config": {
         "sort-packages": true

@@ -53,7 +53,7 @@ class ListFailedCommand extends Command
     {
         $results = [];
 
-        foreach ($this->laravel['queue.failer']->all() as $failed) {
+        foreach ($this->zgutu['queue.failer']->all() as $failed) {
             $results[] = $this->parseFailedJob((array) $failed);
         }
 

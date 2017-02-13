@@ -1,7 +1,5 @@
 <?php
-/**
- * 路由分发服务
- */
+
 namespace Immortal\Routing;
 
 use Immortal\Support\ServiceProvider;

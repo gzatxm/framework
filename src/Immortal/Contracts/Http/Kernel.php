@@ -29,7 +29,7 @@ interface Kernel
     public function terminate($request, $response);
 
     /**
-     * Get the Laravel application instance.
+     * Get the Zgutu application instance.
      *
      * @return \Immortal\Contracts\Foundation\Application
      */

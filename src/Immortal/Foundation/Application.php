@@ -1,7 +1,5 @@
 <?php
-/**
- * 容器应用类
- */
+
 namespace Immortal\Foundation;
 
 use Closure;
@@ -10,23 +8,27 @@ use Immortal\Support\Arr;
 use Immortal\Support\Str;
 use Immortal\Http\Request;
 use Immortal\Container\Container;
-//use Immortal\Filesystem\Filesystem;
+use Immortal\Filesystem\Filesystem;
 use Immortal\Support\ServiceProvider;
 use Immortal\Events\EventServiceProvider;
 use Immortal\Routing\RoutingServiceProvider;
+use Symfony\Component\HttpKernel\HttpKernelInterface;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Immortal\Contracts\Foundation\Application as ApplicationContract;
 
-class Application extends Container implements ApplicationContract
+class Application extends Container implements ApplicationContract, HttpKernelInterface
 {
     /**
-     * The Laravel framework version.
+     * The Zgutu framework version.
      *
      * @var string
      */
     const VERSION = '5.3.30';
 
     /**
-     * The base path for the Laravel installation.
+     * The base path for the Zgutu installation.
      *
      * @var string
      */
@@ -131,8 +133,9 @@ class Application extends Container implements ApplicationContract
     protected $namespace;
 
     /**
-     * 创建应用
-     * @param  string|null $basePath 应用路径
+     * Create a new Immortal application instance.
+     *
+     * @param  string|null  $basePath
      * @return void
      */
     public function __construct($basePath = null)
@@ -159,7 +162,8 @@ class Application extends Container implements ApplicationContract
     }
 
     /**
-     * 注册基本绑定
+     * Register the basic bindings into the container.
+     *
      * @return void
      */
     protected function registerBaseBindings()
@@ -172,7 +176,8 @@ class Application extends Container implements ApplicationContract
     }
 
     /**
-     * 注册基本服务
+     * Register all of the base service providers.
+     *
      * @return void
      */
     protected function registerBaseServiceProviders()
@@ -292,7 +297,7 @@ class Application extends Container implements ApplicationContract
     }
 
     /**
-     * Get the base path of the Laravel installation.
+     * Get the base path of the Zgutu installation.
      *
      * @return string
      */
@@ -545,7 +550,7 @@ class Application extends Container implements ApplicationContract
      */
     public function register($provider, $options = [], $force = false)
     {
-        if (($registered = $this->getProvider($provider)) && !$force) {
+        if (($registered = $this->getProvider($provider)) && ! $force) {
             return $registered;
         }
 
@@ -1060,7 +1065,8 @@ class Application extends Container implements ApplicationContract
     }
 
     /**
-     * 注册核心类别名
+     * Register the core class aliases in the container.
+     *
      * @return void
      */
     public function registerCoreContainerAliases()

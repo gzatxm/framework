@@ -1,10 +1,10 @@
 ## Immortal Queue
 
-The Laravel Queue component provides a unified API across a variety of different queue services. Queues allow you to defer the processing of a time consuming task, such as sending an e-mail, until a later time, thus drastically speeding up the web requests to your application.
+The Zgutu Queue component provides a unified API across a variety of different queue services. Queues allow you to defer the processing of a time consuming task, such as sending an e-mail, until a later time, thus drastically speeding up the web requests to your application.
 
 ### Usage Instructions
 
-First, create a new Queue `Capsule` manager instance. Similar to the "Capsule" provided for the Eloquent ORM, the queue Capsule aims to make configuring the library for usage outside of the Laravel framework as easy as possible.
+First, create a new Queue `Capsule` manager instance. Similar to the "Capsule" provided for the Eloquent ORM, the queue Capsule aims to make configuring the library for usage outside of the Zgutu framework as easy as possible.
 
 ```PHP
 use Immortal\Queue\Capsule\Manager as Queue;
@@ -31,4 +31,4 @@ $queue->push('SendEmail', array('message' => $message));
 Queue::push('SendEmail', array('message' => $message));
 ```
 
-For further documentation on using the queue, consult the [Laravel framework documentation](https://laravel.com/docs).
+For further documentation on using the queue, consult the [Zgutu framework documentation](https://zgutu.com/docs).

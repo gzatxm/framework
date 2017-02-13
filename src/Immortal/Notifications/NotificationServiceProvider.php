@@ -20,7 +20,7 @@ class NotificationServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/resources/views' => resource_path('views/vendor/notifications'),
-            ], 'laravel-notifications');
+            ], 'zgutu-notifications');
         }
     }
 

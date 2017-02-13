@@ -67,7 +67,7 @@ class AppNameCommand extends Command
      */
     public function fire()
     {
-        $this->currentRoot = trim($this->laravel->getNamespace(), '\\');
+        $this->currentRoot = trim($this->zgutu->getNamespace(), '\\');
 
         $this->setBootstrapNamespaces();
 
@@ -94,7 +94,7 @@ class AppNameCommand extends Command
     protected function setAppDirectoryNamespace()
     {
         $files = Finder::create()
-                            ->in($this->laravel['path'])
+                            ->in($this->zgutu['path'])
                             ->contains($this->currentRoot)
                             ->name('*.php');
 
@@ -224,7 +224,7 @@ class AppNameCommand extends Command
     protected function setDatabaseFactoryNamespaces()
     {
         $this->replaceIn(
-            $this->laravel->databasePath().'/factories/ModelFactory.php', $this->currentRoot, $this->argument('name')
+            $this->zgutu->databasePath().'/factories/ModelFactory.php', $this->currentRoot, $this->argument('name')
         );
     }
 
@@ -250,7 +250,7 @@ class AppNameCommand extends Command
      */
     protected function getBootstrapPath()
     {
-        return $this->laravel->bootstrapPath().'/app.php';
+        return $this->zgutu->bootstrapPath().'/app.php';
     }
 
     /**
@@ -260,7 +260,7 @@ class AppNameCommand extends Command
      */
     protected function getComposerPath()
     {
-        return $this->laravel->basePath().'/composer.json';
+        return $this->zgutu->basePath().'/composer.json';
     }
 
     /**
@@ -271,7 +271,7 @@ class AppNameCommand extends Command
      */
     protected function getConfigPath($name)
     {
-        return $this->laravel['path.config'].'/'.$name.'.php';
+        return $this->zgutu['path.config'].'/'.$name.'.php';
     }
 
     /**

@@ -74,8 +74,8 @@ class NotificationTableCommand extends Command
     {
         $name = 'create_notifications_table';
 
-        $path = $this->laravel->databasePath().'/migrations';
+        $path = $this->zgutu->databasePath().'/migrations';
 
-        return $this->laravel['migration.creator']->create($name, $path);
+        return $this->zgutu['migration.creator']->create($name, $path);
     }
 }

@@ -62,7 +62,7 @@ class RouteCacheCommand extends Command
         }
 
         $this->files->put(
-            $this->laravel->getCachedRoutesPath(), $this->buildRouteCacheFile($routes)
+            $this->zgutu->getCachedRoutesPath(), $this->buildRouteCacheFile($routes)
         );
 
         $this->info('Routes cached successfully!');
@@ -75,7 +75,7 @@ class RouteCacheCommand extends Command
      */
     protected function getFreshApplicationRoutes()
     {
-        $app = require $this->laravel->bootstrapPath().'/app.php';
+        $app = require $this->zgutu->bootstrapPath().'/app.php';
 
         $app->make('Immortal\Contracts\Console\Kernel')->bootstrap();
 

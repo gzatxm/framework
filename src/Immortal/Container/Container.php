@@ -1,7 +1,5 @@
 <?php
-/**
- * 容器
- */
+
 namespace Immortal\Container;
 
 use Closure;
