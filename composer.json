@@ -3,11 +3,6 @@
     "description": "The Gutu Framework.",
     "keywords": ["framework", "gutu"],
     "license": "MIT",
-    /*"homepage": "https://laravel.com",
-    "support": {
-        "issues": "https://github.com/laravel/framework/issues",
-        "source": "https://github.com/laravel/framework"
-    },*/
     "authors": [
         {
             "name": "Tu Xiaomu",
